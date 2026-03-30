@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAS Creative Workstream Dashboard | PMAX</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f5f6fa;
+      --surface: #ffffff;
+      --card: #ffffff;
+      --card-hover: #f0f4ff;
+      --border: #e2e8f0;
+      --border-light: #cbd5e1;
+      --text: #1e293b;
+      --muted: #64748b;
+      --accent: #2563eb;
+      --pmax: #0000FF;
+      --vas: #CC1B26;
+      --on-track-bg: rgba(22,163,74,.08); --on-track-bdr: rgba(22,163,74,.3); --on-track-txt: #15803d;
+      --at-risk-bg: rgba(217,119,6,.08); --at-risk-bdr: rgba(217,119,6,.3); --at-risk-txt: #b45309;
+      --delayed-bg: rgba(220,38,38,.08); --delayed-bdr: rgba(220,38,38,.3); --delayed-txt: #dc2626;
+    }
+    body { background:var(--bg); color:var(--text); font-family:'Segoe UI','Inter',system-ui,sans-serif; font-size:13px; line-height:1.5; }
+
+    /* HEADER */
+    .header { background:#fff; border-bottom:1px solid var(--border); padding:14px 32px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:100; box-shadow:0 1px 4px rgba(0,0,0,.06); }
+    .header-left { display:flex; align-items:center; gap:12px; }
+    .logo-pmax { font-weight:800; font-size:14px; color:#fff; letter-spacing:.5px; background:var(--pmax); padding:3px 10px; border-radius:4px; }
+    .logo-vas  { font-weight:800; font-size:14px; color:#fff; letter-spacing:.5px; background:var(--vas); padding:3px 10px; border-radius:4px; }
+    .header-sep { color:#cbd5e1; font-size:18px; }
+    .header-title { font-size:15px; font-weight:700; color:var(--text); }
+    .badge-date { background:var(--bg); border:1px solid var(--border); border-radius:6px; padding:3px 10px; font-size:11px; color:var(--muted); }
+    .badge-period { font-size:11px; color:var(--muted); }
+
+    /* TAB NAV */
+    .tab-nav { background:#fff; border-bottom:2px solid var(--border); padding:0 32px; display:flex; gap:2px; overflow-x:auto; }
+    .tab-btn { background:none; border:none; color:var(--muted); padding:11px 16px; font-size:12px; font-weight:600; cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; white-space:nowrap; transition:all .18s; }
+    .tab-btn:hover { color:var(--accent); background:rgba(37,99,235,.04); border-radius:6px 6px 0 0; }
+    .tab-btn.active { color:var(--accent); border-bottom-color:var(--accent); }
+
+    /* PANELS */
+    .tab-panel { display:none; padding:24px 32px; max-width:1400px; margin:0 auto; }
+    .tab-panel.active { display:block; }
+
+    /* HOW-TO BANNER */
+    .howto-banner { background:linear-gradient(135deg,#eff6ff,#f0f9ff); border:1px solid #bfdbfe; border-radius:12px; padding:18px 22px; margin-bottom:24px; }
+    .howto-title { font-size:12px; font-weight:700; color:var(--accent); margin-bottom:12px; letter-spacing:.5px; text-transform:uppercase; }
+    .howto-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+    .howto-item { background:#fff; border:1px solid #dbeafe; border-radius:8px; padding:12px 14px; }
+    .howto-num { font-size:16px; font-weight:800; color:var(--accent); opacity:.5; }
+    .howto-label { font-size:11px; font-weight:700; color:var(--text); margin:3px 0 2px; }
+    .howto-desc { font-size:11px; color:var(--muted); line-height:1.5; }
+    @media(max-width:900px){ .howto-grid{grid-template-columns:1fr 1fr;} }
+
+    /* SECTION HEADERS */
+    .section-header { display:flex; align-items:baseline; gap:10px; margin-bottom:12px; }
+    .section-num { font-size:10px; font-weight:800; color:var(--accent); letter-spacing:1px; }
+    .section-title { font-size:14px; font-weight:700; color:var(--text); }
+    .section-sub { font-size:11px; color:var(--muted); margin-left:auto; }
+
+    /* SUMMARY CARDS */
+    .summary-row { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-bottom:24px; }
+    .sum-card { background:#fff; border:1.5px solid var(--border); border-radius:10px; padding:14px 16px; cursor:pointer; transition:all .18s; }
+    .sum-card:hover { border-color:var(--accent); box-shadow:0 2px 12px rgba(37,99,235,.1); transform:translateY(-1px); }
+    .sum-card-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px; }
+    .sum-ws-num { font-size:10px; font-weight:800; color:var(--muted); }
+    .sum-status-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:3px; }
+    .sum-ws-name { font-size:12px; font-weight:700; color:var(--text); line-height:1.4; margin-bottom:8px; }
+    .sum-progress-bar { height:4px; background:var(--border); border-radius:2px; margin-bottom:8px; }
+    .sum-progress-fill { height:100%; border-radius:2px; }
+    .sum-footer { display:flex; justify-content:space-between; align-items:center; }
+    .sum-pct { font-size:11px; font-weight:700; }
+    .ob { font-size:9px; font-weight:700; padding:2px 6px; border-radius:3px; }
+    .ob-pmax { background:rgba(0,0,255,.08); color:var(--pmax); }
+    .ob-vas  { background:rgba(204,27,38,.08); color:var(--vas); }
+
+    /* GANTT */
+    .gantt-wrapper { background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:24px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+    .gantt-table { width:100%; border-collapse:collapse; }
+    .gantt-table th { background:#f8fafc; color:var(--muted); font-size:10px; font-weight:600; padding:7px 4px; border-bottom:1px solid var(--border); text-align:center; white-space:nowrap; }
+    .gantt-table th.ws-col { text-align:left; padding-left:16px; min-width:160px; }
+    .gantt-table td { padding:6px 2px; border-bottom:1px solid rgba(0,0,0,.04); vertical-align:middle; }
+    .gantt-table td.ws-label { padding-left:16px; }
+    .gantt-table tr:last-child td { border-bottom:none; }
+    .g-ws-name { font-size:11px; font-weight:700; color:var(--text); }
+    .g-ws-sub  { font-size:10px; color:var(--muted); margin-top:1px; }
+    .gantt-cell { position:relative; height:26px; }
+    .gantt-bar { position:absolute; top:50%; transform:translateY(-50%); height:14px; border-radius:7px; opacity:.75; }
+    .gantt-milestone { position:absolute; top:50%; transform:translate(-50%,-50%) rotate(45deg); width:9px; height:9px; border-radius:1px; }
+    .gantt-month-sep { border-left:2px solid #e2e8f0 !important; }
+    .gantt-today-col { background:rgba(37,99,235,.04) !important; }
+    .month-lbl { color:var(--accent); font-weight:800; font-size:10px; }
+
+    /* STATUS TABLE */
+    .status-table-wrap { background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:24px; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+    .status-table { width:100%; border-collapse:collapse; }
+    .status-table th { background:#f8fafc; color:var(--muted); font-size:10px; font-weight:700; padding:10px 14px; border-bottom:1px solid var(--border); text-align:left; letter-spacing:.4px; text-transform:uppercase; }
+    .status-table td { padding:12px 14px; border-bottom:1px solid rgba(0,0,0,.05); vertical-align:middle; }
+    .status-table tr:last-child td { border-bottom:none; }
+    .status-table tr:hover td { background:#fafbff; }
+    .ws-color-bar { width:3px; height:34px; border-radius:2px; display:inline-block; vertical-align:middle; margin-right:10px; }
+    .st-ws-name { font-weight:700; color:var(--text); font-size:12px; }
+    .st-ws-short { font-size:10px; color:var(--muted); margin-top:1px; }
+    .status-pill { display:inline-flex; align-items:center; gap:4px; padding:3px 10px; border-radius:12px; font-size:10px; font-weight:700; border:1px solid; }
+    .status-pill.on-track { background:var(--on-track-bg); border-color:var(--on-track-bdr); color:var(--on-track-txt); }
+    .status-pill.at-risk  { background:var(--at-risk-bg); border-color:var(--at-risk-bdr); color:var(--at-risk-txt); }
+    .status-pill.delayed  { background:var(--delayed-bg); border-color:var(--delayed-bdr); color:var(--delayed-txt); }
+    .pic-badge { display:inline-block; padding:2px 8px; border-radius:4px; font-size:10px; font-weight:700; border:1px solid; }
+    .pic-pmax  { background:rgba(0,0,255,.07); color:var(--pmax); border-color:rgba(0,0,255,.2); }
+    .pic-vas   { background:rgba(204,27,38,.07); color:var(--vas); border-color:rgba(204,27,38,.2); }
+    .pic-joint { background:rgba(124,58,237,.07); color:#7c3aed; border-color:rgba(124,58,237,.2); }
+    .progress-text { color:var(--muted); font-size:12px; line-height:1.5; }
+
+    /* WS DETAIL */
+    .ws-detail-header { background:#fff; border:1.5px solid var(--border); border-radius:12px; padding:18px 22px; margin-bottom:16px; display:flex; justify-content:space-between; align-items:flex-start; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+    .ws-detail-title { font-size:16px; font-weight:800; color:var(--text); margin-bottom:4px; }
+    .ws-detail-sub { font-size:12px; color:var(--muted); max-width:600px; }
+    .ws-detail-meta { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+
+    /* WEEKLY FOCUS */
+    .weekly-focus { background:#fff; border:1.5px solid var(--border); border-radius:12px; margin-bottom:16px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+    .wf-header { background:linear-gradient(90deg,#eff6ff,#f0f9ff); padding:11px 20px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid #dbeafe; }
+    .wf-title { font-size:12px; font-weight:700; color:var(--accent); letter-spacing:.4px; text-transform:uppercase; }
+    .wf-week  { font-size:11px; color:var(--muted); }
+    .wf-body  { display:grid; grid-template-columns:1fr 1fr; }
+    .wf-col   { padding:14px 20px; }
+    .wf-col:first-child { border-right:1px solid var(--border); }
+    .wf-col-label { font-size:10px; font-weight:800; letter-spacing:.6px; text-transform:uppercase; margin-bottom:10px; display:flex; align-items:center; gap:6px; }
+    .wf-col-label.pmax-label { color:var(--pmax); }
+    .wf-col-label.vas-label  { color:var(--vas); }
+    .wf-col-dot { width:7px; height:7px; border-radius:50%; }
+    .wf-tasks { display:flex; flex-direction:column; gap:5px; }
+    .wf-task-item { font-size:12px; color:var(--text); padding-left:12px; position:relative; line-height:1.5; }
+    .wf-task-item::before { content:'›'; position:absolute; left:0; color:var(--muted); }
+    .cycle-bar { padding:12px 20px; border-top:1px solid var(--border); background:#fafbff; }
+    .cycle-label { font-size:10px; font-weight:700; color:var(--muted); letter-spacing:.4px; text-transform:uppercase; margin-bottom:8px; }
+    .cycle-steps { display:flex; align-items:center; flex-wrap:wrap; gap:0; }
+    .cycle-step { display:flex; align-items:center; }
+    .cycle-node { padding:4px 10px; border-radius:4px; font-size:10px; font-weight:600; white-space:nowrap; }
+    .cycle-node.done     { background:rgba(22,163,74,.1); color:#15803d; border:1px solid rgba(22,163,74,.25); }
+    .cycle-node.active   { background:rgba(37,99,235,.12); color:var(--accent); border:1px solid rgba(37,99,235,.35); font-weight:800; box-shadow:0 1px 6px rgba(37,99,235,.15); }
+    .cycle-node.upcoming { background:#f1f5f9; color:var(--muted); border:1px solid var(--border); }
+    .cycle-arrow { color:#cbd5e1; font-size:11px; padding:0 2px; }
+
+    /* STEPS TABLE */
+    .steps-wrap { background:#fff; border:1px solid var(--border); border-radius:12px; overflow:hidden; box-shadow:0 1px 3px rgba(0,0,0,.04); }
+    .steps-table { width:100%; border-collapse:collapse; }
+    .steps-table th { background:#f8fafc; color:var(--muted); font-size:10px; font-weight:700; padding:9px 12px; border-bottom:1px solid var(--border); text-align:left; text-transform:uppercase; letter-spacing:.4px; white-space:nowrap; }
+    .steps-table td { padding:9px 12px; border-bottom:1px solid rgba(0,0,0,.05); vertical-align:middle; font-size:12px; }
+    .steps-table tr:last-child td { border-bottom:none; }
+    .steps-table tr:hover td { background:#fafbff; }
+    .group-row td { background:#f0f4ff; color:var(--accent); font-size:10px; font-weight:800; letter-spacing:.5px; text-transform:uppercase; padding:7px 12px; border-bottom:1px solid #dbeafe; border-top:1px solid #dbeafe; }
+    .step-id   { color:var(--muted); font-size:10px; font-weight:700; white-space:nowrap; }
+    .step-task { color:var(--text); font-size:12px; }
+    .step-date { color:var(--muted); font-size:11px; white-space:nowrap; }
+    .step-status { display:inline-flex; align-items:center; gap:4px; padding:2px 8px; border-radius:10px; font-size:10px; font-weight:700; white-space:nowrap; }
+    .step-status.done     { background:rgba(22,163,74,.1); color:#15803d; border:1px solid rgba(22,163,74,.25); }
+    .step-status.inprog   { background:rgba(37,99,235,.1); color:var(--accent); border:1px solid rgba(37,99,235,.25); }
+    .step-status.upcoming { background:#f1f5f9; color:var(--muted); border:1px solid var(--border); }
+    .step-status.blocked  { background:rgba(220,38,38,.08); color:#dc2626; border:1px solid rgba(220,38,38,.25); }
+    .step-status-dot { width:5px; height:5px; border-radius:50%; background:currentColor; }
+
+    /* IMPORT GUIDE */
+    .import-guide { background:#eff6ff; border:1px dashed #93c5fd; border-radius:10px; padding:18px 22px; }
+    .import-guide-title { font-size:12px; font-weight:700; color:var(--accent); margin-bottom:10px; }
+    .import-cols { display:flex; gap:6px; flex-wrap:wrap; }
+    .import-col-badge { background:#fff; border:1px solid #dbeafe; border-radius:4px; padding:3px 10px; font-size:11px; color:var(--text); font-family:monospace; }
+
+    /* MISC */
+    .mt-4 { margin-top:16px; }
+    .divider { height:1px; background:var(--border); margin:20px 0; }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <span class="logo-pmax">PMAX</span>
+    <span class="header-sep">×</span>
+    <span class="logo-vas">VAS</span>
+    <span class="header-title">Creative Workstream Dashboard</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:10px">
+    <span class="badge-period">T4 – T9/2026</span>
+    <span class="badge-date" id="dateLabel">—</span>
+  </div>
+</div>
+
+<!-- TAB NAV -->
+<div class="tab-nav" id="tabNav">
+  <button class="tab-btn active" onclick="showTab('overview',this)">📊 Overview</button>
+</div>
+
+<!-- OVERVIEW PANEL -->
+<div id="tab-overview" class="tab-panel active">
+
+  <!-- HOW-TO -->
+  <div class="howto-banner">
+    <div class="howto-title">📌 Hướng dẫn sử dụng dashboard</div>
+    <div class="howto-grid">
+      <div class="howto-item">
+        <div class="howto-num">01</div>
+        <div class="howto-label">Overview Tab</div>
+        <div class="howto-desc">Xem tổng quan 5 workstream: Gantt timeline theo tuần, % tiến độ, status on-track / at-risk và next step cần xử lý ngay.</div>
+      </div>
+      <div class="howto-item">
+        <div class="howto-num">02</div>
+        <div class="howto-label">Tab từng WS</div>
+        <div class="howto-desc">Click vào WS1–WS5 để xem bảng step-by-step chi tiết. Mỗi bước có PIC (PMAX/VAS/Joint), deadline và trạng thái cụ thể.</div>
+      </div>
+      <div class="howto-item">
+        <div class="howto-num">03</div>
+        <div class="howto-label">Weekly Focus</div>
+        <div class="howto-desc">Đầu mỗi tab WS có card key focus tuần này — PMAX đang làm gì, VAS cần phối hợp gì và giai đoạn hiện tại trong chu kỳ sản xuất.</div>
+      </div>
+      <div class="howto-item">
+        <div class="howto-num">04</div>
+        <div class="howto-label">Cập nhật data</div>
+        <div class="howto-desc">Mở file bằng text editor (Notepad/VS Code), tìm phần CONFIG ở đầu script, sửa status / steps / nextStep là dashboard tự cập nhật.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01 SNAPSHOT -->
+  <div class="section-header">
+    <span class="section-num">01 —</span>
+    <span class="section-title">Workstream Snapshot</span>
+    <span class="section-sub">Click card để xem chi tiết từng WS</span>
+  </div>
+  <div class="summary-row" id="summaryCards"></div>
+
+  <!-- 02 GANTT -->
+  <div class="section-header">
+    <span class="section-num">02 —</span>
+    <span class="section-title">Timeline T4 → T9/2026</span>
+    <span class="section-sub">24 tuần · ◆ = milestone</span>
+  </div>
+  <div class="gantt-wrapper">
+    <table class="gantt-table" id="ganttTable"></table>
+  </div>
+
+  <!-- 03 STATUS -->
+  <div class="section-header">
+    <span class="section-num">03 —</span>
+    <span class="section-title">Status & Next Steps</span>
+  </div>
+  <div class="status-table-wrap">
+    <table class="status-table">
+      <thead>
+        <tr>
+          <th style="width:20%">Workstream</th>
+          <th style="width:28%">Current Progress</th>
+          <th style="width:10%">Status</th>
+          <th style="width:28%">Next Step</th>
+          <th style="width:14%">PIC</th>
+        </tr>
+      </thead>
+      <tbody id="statusBody"></tbody>
+    </table>
+  </div>
+
+  <!-- 04 IMPORT -->
+  <div class="section-header mt-4">
+    <span class="section-num">04 —</span>
+    <span class="section-title">Google Sheet Integration</span>
+    <span class="section-sub">Coming soon</span>
+  </div>
+  <div class="import-guide">
+    <div class="import-guide-title">📋 Format Google Sheet để import timeline tự động</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Sheet cần có header row với các cột theo đúng thứ tự sau:</div>
+    <div class="import-cols">
+      <span class="import-col-badge">Workstream</span>
+      <span class="import-col-badge">Group</span>
+      <span class="import-col-badge">Step ID</span>
+      <span class="import-col-badge">Task</span>
+      <span class="import-col-badge">PIC</span>
+      <span class="import-col-badge">Start Date</span>
+      <span class="import-col-badge">End Date</span>
+      <span class="import-col-badge">Status</span>
+    </div>
+    <div style="font-size:11px;color:var(--muted);margin-top:10px">
+      Status: <code style="color:var(--accent)">done</code> / <code style="color:var(--accent)">inprog</code> / <code style="color:var(--accent)">upcoming</code> / <code style="color:var(--accent)">blocked</code> &nbsp;·&nbsp;
+      PIC: <code style="color:var(--pmax)">PMAX</code> / <code style="color:var(--vas)">VAS</code> / <code style="color:#7c3aed">Joint</code>
+    </div>
+  </div>
+</div>
+
+<!-- WS panels injected by JS -->
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// CONFIG
+// ─────────────────────────────────────────────────────────────────────────────
+const PRODUCTION_CYCLE = [
+  'Plan','Script','Revise','Confirm','Shoot','Edit/Dung','Feedback','Revise','Confirm','Airing'
+];
+
+const MONTH_SEPS   = [0,4,8,13,17,21];
+const MONTH_LABELS = {0:'T4',4:'T5',8:'T6',13:'T7',17:'T8',21:'T9'};
+const TODAY_WEEK   = 0;
+
+const WS = [
+  // ── WS1 ──
+  {
+    id:1, color:'#0ea5e9',
+    name:'TikTok Channel Building',
+    shortName:'TikTok Build',
+    status:'on-track',
+    ownerPmax:'Ideation & Content Strategy',
+    ownerVas:'Production & Upload',
+    desc:'Xây dựng kênh TikTok VAS - plan tổng thể T4 gồm pillars & angles. PMAX incharge y tuong; VAS tu handle mot so angles tu quay den dung.',
+    currentProgress:'Brief & Pillar definition dang in-progress. Content plan T4 chua lock.',
+    nextStep:'Lock content plan T4 - deadline T4W1 (30/3-5/4)',
+    nextStepPic:'PMAX',
+    ganttStart:0, ganttEnd:23,
+    weeklyFocus:{
+      cycleStage:'Plan', cycleIndex:0,
+      focusPmax:[
+        'Hoan thien Pillar definition & angle strategy cho TikTok',
+        'Draft content plan thang 4 (topic list + format)',
+        'Setup quy trinh duyet: concept approval truoc khi VAS xuong production'
+      ],
+      focusVas:[
+        'Confirm phan chia angles: PMAX lead vs VAS self-produce',
+        'Cung cap reference va yeu cau ve tone/style',
+        'Assign nguoi phu trach production & upload phia VAS'
+      ]
+    },
+    phases:[
+      {name:'Content plan T4',week:1},{name:'Batch T4 publish',week:4},
+      {name:'Content plan T5',week:5},{name:'Content plan T6',week:9},
+      {name:'Content plan T7',week:13},{name:'Content plan T8',week:17},{name:'Wrap-up T9',week:22}
+    ],
+    steps:[
+      {g:'THANG 4 - SETUP & BATCH 1'},
+      {id:'1.1',task:'Brief & Pillar definition session',pic:'Joint',start:'30/3',end:'31/3',status:'inprog'},
+      {id:'1.2',task:'PMAX draft content plan T4 (topics + format)',pic:'PMAX',start:'1/4',end:'2/4',status:'upcoming'},
+      {id:'1.3',task:'VAS review & confirm phan chia angles',pic:'VAS',start:'3/4',end:'4/4',status:'upcoming'},
+      {id:'1.4',task:'Lock content calendar T4',pic:'Joint',start:'5/4',end:'5/4',status:'upcoming'},
+      {id:'1.5',task:'Production batch 1 kickoff (PMAX lead angles)',pic:'PMAX',start:'7/4',end:'12/4',status:'upcoming'},
+      {id:'1.6',task:'VAS self-produce angles (theo phan cong)',pic:'VAS',start:'7/4',end:'14/4',status:'upcoming'},
+      {id:'1.7',task:'Review & approve truoc khi dang',pic:'PMAX',start:'13/4',end:'14/4',status:'upcoming'},
+      {id:'1.8',task:'Publish batch 1 TikTok',pic:'Joint',start:'15/4',end:'30/4',status:'upcoming'},
+      {g:'THANG 5 - BATCH 2'},
+      {id:'2.1',task:'Content plan T5 - brief & topics',pic:'PMAX',start:'28/4',end:'30/4',status:'upcoming'},
+      {id:'2.2',task:'VAS approve content plan T5',pic:'VAS',start:'1/5',end:'2/5',status:'upcoming'},
+      {id:'2.3',task:'Production batch 2',pic:'Joint',start:'3/5',end:'17/5',status:'upcoming'},
+      {id:'2.4',task:'Publish batch 2 TikTok',pic:'Joint',start:'18/5',end:'31/5',status:'upcoming'},
+      {g:'THANG 6-9 - ONGOING'},
+      {id:'3.1',task:'Content plan T6 + production',pic:'Joint',start:'1/6',end:'30/6',status:'upcoming'},
+      {id:'3.2',task:'Content plan T7 + production',pic:'Joint',start:'1/7',end:'31/7',status:'upcoming'},
+      {id:'3.3',task:'Content plan T8 + production',pic:'Joint',start:'1/8',end:'31/8',status:'upcoming'},
+      {id:'3.4',task:'Content plan T9 + wrap-up report',pic:'Joint',start:'1/9',end:'30/9',status:'upcoming'}
+    ]
+  },
+
+  // ── WS2 ──
+  {
+    id:2, color:'#f59e0b',
+    name:'Sale Focus Videos',
+    shortName:'Sale Videos',
+    status:'on-track',
+    ownerPmax:'Full production (ca 2 pack)',
+    ownerVas:'Brief, footage & approval',
+    desc:'2 production pack: Pack 1 - Utilize footage co san (nhanh hon). Pack 2 - Quay moi hoan toan. Muc tieu push sale tuyen sinh.',
+    currentProgress:'Brief & Concept 2 pack dang in-progress. PMAX chuan bi proposal.',
+    nextStep:'PMAX deliver concept + script 2 pack cho VAS review',
+    nextStepPic:'PMAX',
+    ganttStart:0, ganttEnd:10,
+    weeklyFocus:{
+      cycleStage:'Script', cycleIndex:1,
+      focusPmax:[
+        'Hoan thien concept & script Pack 1 (utilize footage)',
+        'Xem xet footage co san cua VAS de chon loc',
+        'Brief concept Pack 2 (quay moi)'
+      ],
+      focusVas:[
+        'Provide footage co san cho PMAX review',
+        'Confirm USP va key message cho tung pack',
+        'Schedule ngay review concept: tuan 31/3-4/4'
+      ]
+    },
+    phases:[
+      {name:'Pack 1 concept',week:1},{name:'Pack 1 deliver',week:3},
+      {name:'Pack 2 quay',week:5},{name:'Pack 2 deliver',week:9}
+    ],
+    steps:[
+      {g:'PACK 1 - UTILIZE FOOTAGE'},
+      {id:'1.1',task:'Brief & concept Pack 1',pic:'Joint',start:'30/3',end:'31/3',status:'inprog'},
+      {id:'1.2',task:'VAS provide footage library',pic:'VAS',start:'30/3',end:'2/4',status:'inprog'},
+      {id:'1.3',task:'Script Pack 1 (su dung footage cu)',pic:'PMAX',start:'1/4',end:'3/4',status:'upcoming'},
+      {id:'1.4',task:'VAS review & approve script',pic:'VAS',start:'4/4',end:'5/4',status:'upcoming'},
+      {id:'1.5',task:'Edit Pack 1 tu footage co san',pic:'PMAX',start:'6/4',end:'10/4',status:'upcoming'},
+      {id:'1.6',task:'VAS review cut v1',pic:'VAS',start:'11/4',end:'12/4',status:'upcoming'},
+      {id:'1.7',task:'Revise & final cut Pack 1',pic:'PMAX',start:'13/4',end:'14/4',status:'upcoming'},
+      {id:'1.8',task:'VAS final approve Pack 1',pic:'VAS',start:'15/4',end:'15/4',status:'upcoming'},
+      {id:'1.9',task:'Deliver & airing Pack 1',pic:'Joint',start:'16/4',end:'16/4',status:'upcoming'},
+      {g:'PACK 2 - QUAY MOI'},
+      {id:'2.1',task:'Brief & concept Pack 2',pic:'Joint',start:'7/4',end:'9/4',status:'upcoming'},
+      {id:'2.2',task:'Script Pack 2',pic:'PMAX',start:'10/4',end:'13/4',status:'upcoming'},
+      {id:'2.3',task:'VAS approve script Pack 2',pic:'VAS',start:'14/4',end:'15/4',status:'upcoming'},
+      {id:'2.4',task:'Casting & location setup',pic:'PMAX',start:'16/4',end:'18/4',status:'upcoming'},
+      {id:'2.5',task:'Quay Pack 2',pic:'Joint',start:'21/4',end:'22/4',status:'upcoming'},
+      {id:'2.6',task:'Edit & post-production Pack 2',pic:'PMAX',start:'23/4',end:'30/4',status:'upcoming'},
+      {id:'2.7',task:'VAS review & feedback',pic:'VAS',start:'1/5',end:'3/5',status:'upcoming'},
+      {id:'2.8',task:'Final cut & deliver Pack 2',pic:'PMAX',start:'4/5',end:'7/5',status:'upcoming'},
+      {id:'2.9',task:'Airing Pack 2',pic:'Joint',start:'8/5',end:'8/5',status:'upcoming'}
+    ]
+  },
+
+  // ── WS3 ──
+  {
+    id:3, color:'#10b981',
+    name:'Livestream Production',
+    shortName:'Livestream',
+    status:'on-track',
+    ownerPmax:'Script, setup & kich ban',
+    ownerVas:'Host, san pham & noi dung',
+    desc:'Phien livestream tuyen sinh dinh ky 1 lan/thang, tu thang 3 den thang 6/2026. Moi phien co quy trinh prep - script - rehearsal - live.',
+    currentProgress:'Phien T3 dang LIVE. Dang chuan bi outline cho phien T4.',
+    nextStep:'PMAX deliver outline phien T4 cho VAS review',
+    nextStepPic:'PMAX',
+    ganttStart:0, ganttEnd:14,
+    weeklyFocus:{
+      cycleStage:'Plan', cycleIndex:0,
+      focusPmax:[
+        'Tong ket phien T3: view, CTR, conversion rate',
+        'Draft outline & kich ban phien T4',
+        'Chuan bi checklist setup technical cho phien T4'
+      ],
+      focusVas:[
+        'Confirm host va nguoi tham gia cho phien T4',
+        'Cung cap san pham/uu dai se gioi thieu trong phien T4',
+        'Feedback ve nhung gi chua tot tu phien T3'
+      ]
+    },
+    phases:[
+      {name:'Phien T3 LIVE',week:0},{name:'Phien T4',week:3},
+      {name:'Phien T5',week:7},{name:'Phien T6',week:11}
+    ],
+    steps:[
+      {g:'PHIEN T3 (DANG LIVE)'},
+      {id:'1.1',task:'Outline & kich ban phien T3',pic:'PMAX',start:'10/3',end:'14/3',status:'done'},
+      {id:'1.2',task:'VAS approve kich ban',pic:'VAS',start:'15/3',end:'17/3',status:'done'},
+      {id:'1.3',task:'Rehearsal + setup technical',pic:'Joint',start:'24/3',end:'26/3',status:'done'},
+      {id:'1.4',task:'GO LIVE phien T3',pic:'Joint',start:'27/3',end:'27/3',status:'inprog'},
+      {id:'1.5',task:'Post-live report & tong ket',pic:'PMAX',start:'28/3',end:'30/3',status:'upcoming'},
+      {g:'PHIEN T4'},
+      {id:'2.1',task:'Tong ket phien T3 - insight & improvement',pic:'PMAX',start:'31/3',end:'2/4',status:'upcoming'},
+      {id:'2.2',task:'Draft outline phien T4',pic:'PMAX',start:'3/4',end:'5/4',status:'upcoming'},
+      {id:'2.3',task:'VAS confirm host + san pham phien T4',pic:'VAS',start:'3/4',end:'6/4',status:'upcoming'},
+      {id:'2.4',task:'VAS review outline phien T4',pic:'VAS',start:'7/4',end:'8/4',status:'upcoming'},
+      {id:'2.5',task:'Hoan thien kich ban chi tiet',pic:'PMAX',start:'9/4',end:'11/4',status:'upcoming'},
+      {id:'2.6',task:'Rehearsal phien T4',pic:'Joint',start:'14/4',end:'15/4',status:'upcoming'},
+      {id:'2.7',task:'GO LIVE phien T4',pic:'Joint',start:'17/4',end:'17/4',status:'upcoming'},
+      {g:'PHIEN T5 & T6'},
+      {id:'3.1',task:'Phien T5 - toan bo quy trinh',pic:'Joint',start:'1/5',end:'22/5',status:'upcoming'},
+      {id:'3.2',task:'Phien T6 - toan bo quy trinh',pic:'Joint',start:'1/6',end:'19/6',status:'upcoming'}
+    ]
+  },
+
+  // ── WS4 ──
+  {
+    id:4, color:'#8b5cf6',
+    name:"Branding / Hero Assets - Parent's POV",
+    shortName:'Hero Assets',
+    status:'on-track',
+    ownerPmax:'Creative + Video',
+    ownerVas:'Admission Dept',
+    desc:"Series hero content nhin tu goc do phu huynh VASer: teasing video, main film, cutdown 30s va interview 'Ba me nghi gi'. Workstream trong tam cua campaign Admission T4-T5/2026.",
+    currentProgress:"Teasing video dang dung (rough cut). Main Film da airing 28/3. Cutdown 30s dang revise script. Interview casting chua confirm.",
+    nextStep:"Confirm script cutdown 30s + schedule casting interview",
+    nextStepPic:'VAS',
+    ganttStart:0, ganttEnd:8,
+    weeklyFocus:{
+      cycleStage:'Edit/Dung', cycleIndex:5,
+      focusPmax:[
+        'Dung Teasing Video VASer (ban rough cut)',
+        'Revise script Cutdown 30s lan 2',
+        'Chuan bi brief casting cho Interview Ba me nghi gi'
+      ],
+      focusVas:[
+        'Review rough cut Teasing Video',
+        'Confirm script Cutdown 30s',
+        'Confirm danh sach casting cho Interview (deadline 5/4)'
+      ]
+    },
+    phases:[
+      {name:'Teasing Launch',week:2},{name:'Cutdown Air',week:5},{name:'Interview Air',week:7}
+    ],
+    steps:[
+      {g:"I. TEASING — Video 'Trai nghiem thuc thu cua VASer'"},
+      {id:'1.1',task:'Brief & script concept cho teasing video',pic:'Joint',start:'17/3',end:'18/3',status:'done'},
+      {id:'1.2',task:'Script draft v1',pic:'PMAX',start:'18/3',end:'20/3',status:'done'},
+      {id:'1.3',task:'VAS review script v1',pic:'VAS',start:'21/3',end:'22/3',status:'done'},
+      {id:'1.4',task:'Revise script v2',pic:'PMAX',start:'23/3',end:'24/3',status:'done'},
+      {id:'1.5',task:'VAS approve script final',pic:'VAS',start:'25/3',end:'25/3',status:'done'},
+      {id:'1.6',task:'Shoot teasing video tai truong VAS',pic:'Joint',start:'26/3',end:'27/3',status:'inprog'},
+      {id:'1.7',task:'Edit / Dung rough cut',pic:'PMAX',start:'28/3',end:'3/4',status:'inprog'},
+      {id:'1.8',task:'VAS review rough cut',pic:'VAS',start:'4/4',end:'6/4',status:'upcoming'},
+      {id:'1.9',task:'Revise theo feedback',pic:'PMAX',start:'7/4',end:'9/4',status:'upcoming'},
+      {id:'1.10',task:'VAS final approve',pic:'VAS',start:'10/4',end:'10/4',status:'upcoming'},
+      {id:'1.11',task:'Airing Teasing Video',pic:'Joint',start:'11/4',end:'11/4',status:'upcoming'},
+      {g:'I. TEASING — Social Post'},
+      {id:'2.1',task:'Brief noi dung social teasing',pic:'Joint',start:'20/3',end:'21/3',status:'done'},
+      {id:'2.2',task:'Design 5 social posts teasing',pic:'PMAX',start:'22/3',end:'25/3',status:'done'},
+      {id:'2.3',task:'VAS review posts teasing',pic:'VAS',start:'26/3',end:'27/3',status:'inprog'},
+      {id:'2.4',task:'Chinh sua theo feedback',pic:'PMAX',start:'28/3',end:'29/3',status:'upcoming'},
+      {id:'2.5',task:'VAS final approve social posts',pic:'VAS',start:'30/3',end:'30/3',status:'upcoming'},
+      {id:'2.6',task:'Len lich dang teasing posts',pic:'PMAX',start:'31/3',end:'31/3',status:'upcoming'},
+      {id:'2.7',task:'Airing social posts teasing',pic:'Joint',start:'1/4',end:'10/4',status:'upcoming'},
+      {g:'II. LAUNCHING — Main Film'},
+      {id:'3.1',task:'Script & storyboard Main Film',pic:'PMAX',start:'1/3',end:'10/3',status:'done'},
+      {id:'3.2',task:'VAS approve script Main Film',pic:'VAS',start:'11/3',end:'13/3',status:'done'},
+      {id:'3.3',task:'Quay Main Film (location VAS campus)',pic:'Joint',start:'14/3',end:'16/3',status:'done'},
+      {id:'3.4',task:'Edit + color grade + sound mix',pic:'PMAX',start:'17/3',end:'26/3',status:'done'},
+      {id:'3.5',task:'Airing Main Film (FB/YT/Zalo OA)',pic:'Joint',start:'28/3',end:'8/4',status:'inprog'},
+      {g:'III. AMPLIFYING — Cutdown 30s'},
+      {id:'4.1',task:'Brief concept cutdown 30s tu Main Film',pic:'Joint',start:'28/3',end:'29/3',status:'done'},
+      {id:'4.2',task:'Script cutdown 30s v1',pic:'PMAX',start:'30/3',end:'31/3',status:'done'},
+      {id:'4.3',task:'VAS review script cutdown',pic:'VAS',start:'1/4',end:'2/4',status:'inprog'},
+      {id:'4.4',task:'Revise script v2',pic:'PMAX',start:'3/4',end:'4/4',status:'upcoming'},
+      {id:'4.5',task:'VAS approve script final',pic:'VAS',start:'5/4',end:'5/4',status:'upcoming'},
+      {id:'4.6',task:'Edit cutdown tu footage Main Film',pic:'PMAX',start:'6/4',end:'9/4',status:'upcoming'},
+      {id:'4.7',task:'VAS review cut v1',pic:'VAS',start:'10/4',end:'11/4',status:'upcoming'},
+      {id:'4.8',task:'Revise cut',pic:'PMAX',start:'12/4',end:'13/4',status:'upcoming'},
+      {id:'4.9',task:'VAS final approve',pic:'VAS',start:'14/4',end:'14/4',status:'upcoming'},
+      {id:'4.10',task:'Export + deliver file final',pic:'PMAX',start:'15/4',end:'15/4',status:'upcoming'},
+      {id:'4.11',task:'Airing Cutdown 30s (paid + organic)',pic:'Joint',start:'16/4',end:'30/4',status:'upcoming'},
+      {g:"III. AMPLIFYING — Interview Video 'Ba me nghi gi'"},
+      {id:'5.1',task:'Concept + format interview video',pic:'Joint',start:'1/4',end:'2/4',status:'upcoming'},
+      {id:'5.2',task:'Brief casting (3 cap phu huynh + hoc sinh)',pic:'PMAX',start:'2/4',end:'3/4',status:'upcoming'},
+      {id:'5.3',task:'VAS confirm casting list',pic:'VAS',start:'4/4',end:'5/4',status:'inprog'},
+      {id:'5.4',task:'Viet cau hoi phong van cho tung nhom',pic:'PMAX',start:'5/4',end:'7/4',status:'upcoming'},
+      {id:'5.5',task:'VAS review cau hoi phong van',pic:'VAS',start:'8/4',end:'9/4',status:'upcoming'},
+      {id:'5.6',task:'Schedule ngay quay phu huynh nhom 1',pic:'VAS',start:'10/4',end:'11/4',status:'upcoming'},
+      {id:'5.7',task:'Quay interview nhom 1',pic:'Joint',start:'14/4',end:'14/4',status:'upcoming'},
+      {id:'5.8',task:'Schedule ngay quay phu huynh nhom 2',pic:'VAS',start:'14/4',end:'15/4',status:'upcoming'},
+      {id:'5.9',task:'Quay interview nhom 2',pic:'Joint',start:'17/4',end:'17/4',status:'upcoming'},
+      {id:'5.10',task:'Quay interview nhom 3',pic:'Joint',start:'19/4',end:'19/4',status:'upcoming'},
+      {id:'5.11',task:'Dung rough cut ca 3 nhom',pic:'PMAX',start:'20/4',end:'25/4',status:'upcoming'},
+      {id:'5.12',task:'VAS review rough cut',pic:'VAS',start:'26/4',end:'28/4',status:'upcoming'},
+      {id:'5.13',task:'Revise + fine cut',pic:'PMAX',start:'29/4',end:'2/5',status:'upcoming'},
+      {id:'5.14',task:'VAS final approve',pic:'VAS',start:'3/5',end:'4/5',status:'upcoming'},
+      {id:'5.15',task:'Export + deliver files (3 versions)',pic:'PMAX',start:'4/5',end:'4/5',status:'upcoming'},
+      {id:'5.16',task:'Airing Interview Videos',pic:'Joint',start:'5/5',end:'5/5',status:'upcoming'}
+    ]
+  },
+
+  // ── WS5 ──
+  {
+    id:5, color:'#f97316',
+    name:'AWO for Performance',
+    shortName:'AWO Perf',
+    status:'on-track',
+    ownerPmax:'Full production & optimization',
+    ownerVas:'Brief, USP & approval',
+    desc:'San xuat AWO (Animated Web Optimization) cho performance ads. Muc tieu: convert va mo pheu tuyen sinh cho VAS tren cac kenh paid.',
+    currentProgress:'Brief & angle strategy dang in-progress. PMAX chuan bi concept lock.',
+    nextStep:'Deliver concept + angle strategy cho VAS review',
+    nextStepPic:'PMAX',
+    ganttStart:0, ganttEnd:12,
+    weeklyFocus:{
+      cycleStage:'Plan', cycleIndex:0,
+      focusPmax:[
+        'Finalize brief & angle strategy AWO',
+        'Concept lock - 3-5 angles khac nhau',
+        'Chuan bi asset list can tu VAS (logo, product image, v.v.)'
+      ],
+      focusVas:[
+        'Confirm USP chinh va key message cho tung kenh',
+        'Provide brand asset: logo file, color guide, font',
+        'Confirm muc tieu conversion va CTA chinh'
+      ]
+    },
+    phases:[
+      {name:'Concept lock',week:1},{name:'Set 1 deliver',week:3},
+      {name:'Set 2 deliver',week:6},{name:'Optimization',week:10}
+    ],
+    steps:[
+      {g:'BRIEF & CONCEPT'},
+      {id:'1.1',task:'Brief & angle strategy AWO',pic:'Joint',start:'30/3',end:'31/3',status:'inprog'},
+      {id:'1.2',task:'VAS confirm USP + key message',pic:'VAS',start:'30/3',end:'2/4',status:'inprog'},
+      {id:'1.3',task:'PMAX develop 3-5 angle concepts',pic:'PMAX',start:'1/4',end:'4/4',status:'upcoming'},
+      {id:'1.4',task:'VAS review & chon angle',pic:'VAS',start:'5/4',end:'6/4',status:'upcoming'},
+      {id:'1.5',task:'Concept lock + VAS approve',pic:'Joint',start:'7/4',end:'7/4',status:'upcoming'},
+      {g:'SET 1 - PRODUCTION'},
+      {id:'2.1',task:'Produce AWO set 1 (3 angles x 3 formats)',pic:'PMAX',start:'8/4',end:'15/4',status:'upcoming'},
+      {id:'2.2',task:'VAS review set 1',pic:'VAS',start:'16/4',end:'17/4',status:'upcoming'},
+      {id:'2.3',task:'Revise theo feedback',pic:'PMAX',start:'18/4',end:'19/4',status:'upcoming'},
+      {id:'2.4',task:'Final approve + deploy set 1',pic:'Joint',start:'20/4',end:'21/4',status:'upcoming'},
+      {g:'SET 2 - OPTIMIZATION'},
+      {id:'3.1',task:'Analyze performance set 1 (2 tuan)',pic:'PMAX',start:'22/4',end:'5/5',status:'upcoming'},
+      {id:'3.2',task:'Brief set 2 dua tren performance insight',pic:'Joint',start:'6/5',end:'7/5',status:'upcoming'},
+      {id:'3.3',task:'Produce AWO set 2 (winning angles iterate)',pic:'PMAX',start:'8/5',end:'16/5',status:'upcoming'},
+      {id:'3.4',task:'VAS approve set 2',pic:'VAS',start:'17/5',end:'18/5',status:'upcoming'},
+      {id:'3.5',task:'Deploy set 2 + monitor',pic:'Joint',start:'19/5',end:'19/5',status:'upcoming'},
+      {g:'ONGOING OPTIMIZATION'},
+      {id:'4.1',task:'Monthly performance review & iterate',pic:'PMAX',start:'1/6',end:'30/9',status:'upcoming'}
+    ]
+  }
+];
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HELPERS
+// ─────────────────────────────────────────────────────────────────────────────
+const d = new Date();
+document.getElementById('dateLabel').textContent =
+  d.toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric'});
+
+function picClass(p){
+  if(!p) return '';
+  const v = String(p).toUpperCase();
+  if(v==='PMAX')  return 'pic-pmax';
+  if(v==='VAS')   return 'pic-vas';
+  return 'pic-joint';
+}
+function statusLabel(s){
+  return s==='on-track'?'On Track':s==='at-risk'?'At Risk':'Delayed';
+}
+function stepStatusLabel(s){
+  return s==='done'?'Done':s==='inprog'?'In Progress':s==='blocked'?'Blocked':'Upcoming';
+}
+function calcProgress(ws){
+  const steps = (ws.steps||[]).filter(s=>s.id);
+  if(!steps.length) return 0;
+  const done   = steps.filter(s=>s.status==='done').length;
+  const inprog = steps.filter(s=>s.status==='inprog').length;
+  return Math.round((done + inprog*0.5)/steps.length*100);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER: SUMMARY CARDS
+// ─────────────────────────────────────────────────────────────────────────────
+function renderSummaryCards(){
+  document.getElementById('summaryCards').innerHTML = WS.map(ws=>{
+    const pct = calcProgress(ws);
+    const dotColor = ws.status==='on-track'?'#16a34a':ws.status==='at-risk'?'#d97706':'#dc2626';
+    return `<div class="sum-card" onclick="showTab('ws${ws.id}',document.querySelector('[data-wsid=\\'${ws.id}\\']'))">
+      <div class="sum-card-top">
+        <span class="sum-ws-num">WS${ws.id}</span>
+        <span class="sum-status-dot" style="background:${dotColor}"></span>
+      </div>
+      <div class="sum-ws-name">${ws.name}</div>
+      <div class="sum-progress-bar"><div class="sum-progress-fill" style="width:${pct}%;background:${ws.color}"></div></div>
+      <div class="sum-footer">
+        <span class="sum-pct" style="color:${ws.color}">${pct}%</span>
+        <div style="display:flex;gap:4px">
+          <span class="ob ob-pmax">PMAX</span>
+          <span class="ob ob-vas">VAS</span>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER: GANTT
+// ─────────────────────────────────────────────────────────────────────────────
+function renderGantt(){
+  const t = document.getElementById('ganttTable');
+  const numWeeks = 24;
+
+  // Header
+  let hdr = `<tr><th class="ws-col">Workstream</th>`;
+  for(let i=0;i<numWeeks;i++){
+    const isMS = MONTH_SEPS.includes(i);
+    const lbl  = isMS?`<span class="month-lbl">${MONTH_LABELS[i]}</span>`:`<span style="opacity:.4;font-size:9px">W${i+1}</span>`;
+    hdr += `<th class="${isMS?'gantt-month-sep':''} ${i===TODAY_WEEK?'gantt-today-col':''}" style="min-width:28px;padding:5px 2px">${lbl}</th>`;
+  }
+  hdr += '</tr>';
+
+  const rows = WS.map(ws=>{
+    let cells = '';
+    for(let i=0;i<numWeeks;i++){
+      const inBar   = i>=ws.ganttStart && i<=ws.ganttEnd;
+      const isFirst = i===ws.ganttStart;
+      const ms = (ws.phases||[]).filter(p=>p.week===i);
+      let inner = '';
+      if(isFirst && inBar){
+        const barW = (ws.ganttEnd - ws.ganttStart + 1)*28 - 4;
+        inner = `<div class="gantt-cell" style="overflow:visible">
+          <div class="gantt-bar" style="background:${ws.color};width:${barW}px;left:2px"></div>
+          ${ms.map(m=>`<div class="gantt-milestone" style="background:${ws.color};left:${(m.week-ws.ganttStart)*28+14}px;z-index:5" title="${m.name}"></div>`).join('')}
+        </div>`;
+      } else if(!inBar && ms.length){
+        inner = ms.map(m=>`<div style="text-align:center;line-height:26px">
+          <span style="display:inline-block;width:8px;height:8px;background:${ws.color};border-radius:1px;transform:rotate(45deg)" title="${m.name}"></span>
+        </div>`).join('');
+      }
+      cells += `<td class="${MONTH_SEPS.includes(i)?'gantt-month-sep':''} ${i===TODAY_WEEK?'gantt-today-col':''}" style="padding:2px 0">${inner}</td>`;
+    }
+    return `<tr>
+      <td class="ws-label">
+        <div class="g-ws-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ws.color};margin-right:6px;vertical-align:middle"></span>WS${ws.id} · ${ws.shortName}</div>
+        <div class="g-ws-sub" style="padding-left:14px">${ws.ownerPmax}</div>
+      </td>${cells}
+    </tr>`;
+  }).join('');
+
+  t.innerHTML = hdr + rows;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER: STATUS TABLE
+// ─────────────────────────────────────────────────────────────────────────────
+function renderStatusTable(){
+  document.getElementById('statusBody').innerHTML = WS.map(ws=>`
+    <tr>
+      <td>
+        <div style="display:flex;align-items:center">
+          <span class="ws-color-bar" style="background:${ws.color}"></span>
+          <div>
+            <div class="st-ws-name">WS${ws.id} · ${ws.shortName}</div>
+            <div class="st-ws-short">${ws.name}</div>
+          </div>
+        </div>
+      </td>
+      <td class="progress-text">${ws.currentProgress}</td>
+      <td><span class="status-pill ${ws.status}">${statusLabel(ws.status)}</span></td>
+      <td class="progress-text">${ws.nextStep}</td>
+      <td><span class="pic-badge ${picClass(ws.nextStepPic)}">${ws.nextStepPic}</span></td>
+    </tr>`).join('');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RENDER: WS DETAIL TABS
+// ─────────────────────────────────────────────────────────────────────────────
+function renderWSTabs(){
+  const nav  = document.getElementById('tabNav');
+  const body = document.body;
+  WS.forEach(ws=>{
+    const btn = document.createElement('button');
+    btn.className = 'tab-btn';
+    btn.setAttribute('data-wsid', ws.id);
+    btn.innerHTML = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ws.color};margin-right:6px;vertical-align:middle"></span>WS${ws.id} · ${ws.shortName}`;
+    btn.onclick = function(){ showTab('ws'+ws.id, this); };
+    nav.appendChild(btn);
+
+    const panel = document.createElement('div');
+    panel.id = 'tab-ws'+ws.id;
+    panel.className = 'tab-panel';
+    panel.innerHTML = buildWSPanel(ws);
+    body.appendChild(panel);
+  });
+}
+
+function buildWSPanel(ws){
+  const pct = calcProgress(ws);
+  const cycleHTML = PRODUCTION_CYCLE.map((name,i)=>{
+    const cls = i<ws.weeklyFocus.cycleIndex?'done':i===ws.weeklyFocus.cycleIndex?'active':'upcoming';
+    const arrow = i<PRODUCTION_CYCLE.length-1?'<span class="cycle-arrow">›</span>':'';
+    return `<div class="cycle-step"><span class="cycle-node ${cls}">${name}</span>${arrow}</div>`;
+  }).join('');
+
+  const stepsHTML = (ws.steps||[]).map(s=>{
+    if(s.g) return `<tr class="group-row"><td colspan="6">${s.g}</td></tr>`;
+    const sc = s.status||'upcoming';
+    return `<tr>
+      <td class="step-id">${s.id}</td>
+      <td class="step-task">${s.task}</td>
+      <td><span class="pic-badge ${picClass(s.pic)}">${s.pic||''}</span></td>
+      <td class="step-date">${s.start||''}</td>
+      <td class="step-date">${s.end||''}</td>
+      <td><span class="step-status ${sc}"><span class="step-status-dot"></span>${stepStatusLabel(sc)}</span></td>
+    </tr>`;
+  }).join('');
+
+  return `
+  <div class="ws-detail-header">
+    <div>
+      <div class="ws-detail-title"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${ws.color};margin-right:8px;vertical-align:middle"></span>WS${ws.id} · ${ws.name}</div>
+      <div class="ws-detail-sub">${ws.desc}</div>
+    </div>
+    <div class="ws-detail-meta">
+      <span class="status-pill ${ws.status}">${statusLabel(ws.status)}</span>
+      <span class="ob ob-pmax">${ws.ownerPmax}</span>
+      <span class="ob ob-vas">${ws.ownerVas}</span>
+      <span style="font-size:12px;color:${ws.color};font-weight:700">${pct}%</span>
+    </div>
+  </div>
+
+  <div class="weekly-focus">
+    <div class="wf-header">
+      <span class="wf-title">🎯 Key Focus Tuần Này</span>
+      <span class="wf-week">Week ${TODAY_WEEK+1} · 30/3 – 5/4/2026</span>
+    </div>
+    <div class="wf-body">
+      <div class="wf-col">
+        <div class="wf-col-label pmax-label"><span class="wf-col-dot" style="background:var(--pmax)"></span>PMAX đang làm</div>
+        <div class="wf-tasks">${ws.weeklyFocus.focusPmax.map(t=>`<div class="wf-task-item">${t}</div>`).join('')}</div>
+      </div>
+      <div class="wf-col">
+        <div class="wf-col-label vas-label"><span class="wf-col-dot" style="background:var(--vas)"></span>VAS cần phối hợp</div>
+        <div class="wf-tasks">${ws.weeklyFocus.focusVas.map(t=>`<div class="wf-task-item">${t}</div>`).join('')}</div>
+      </div>
+    </div>
+    <div class="cycle-bar">
+      <div class="cycle-label">Chu kỳ sản xuất · Đang ở: <strong style="color:var(--accent)">${ws.weeklyFocus.cycleStage}</strong></div>
+      <div class="cycle-steps">${cycleHTML}</div>
+    </div>
+  </div>
+
+  <div class="steps-wrap">
+    <table class="steps-table">
+      <thead><tr>
+        <th style="width:6%">ID</th>
+        <th style="width:42%">Task / Deliverable</th>
+        <th style="width:10%">PIC</th>
+        <th style="width:10%">Start</th>
+        <th style="width:10%">End</th>
+        <th style="width:12%">Status</th>
+      </tr></thead>
+      <tbody>${stepsHTML}</tbody>
+    </table>
+  </div>`;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TAB SYSTEM
+// ─────────────────────────────────────────────────────────────────────────────
+function showTab(id, btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  const panel = document.getElementById('tab-'+id);
+  if(panel) panel.classList.add('active');
+  if(btn) btn.classList.add('active');
+  else {
+    const m = id.match(/ws(\d+)/);
+    if(m){ const b=document.querySelector(`[data-wsid="${m[1]}"]`); if(b) b.classList.add('active'); }
+  }
+}
+
+// INIT
+renderSummaryCards();
+renderGantt();
+renderStatusTable();
+renderWSTabs();
+</script>
+</body>
+</html>
