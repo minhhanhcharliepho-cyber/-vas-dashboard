@@ -133,7 +133,7 @@
     .wf-col-dot { width:7px; height:7px; border-radius:50%; }
     .wf-tasks { display:flex; flex-direction:column; gap:5px; }
     .wf-task-item { font-size:12px; color:var(--text); padding-left:12px; position:relative; line-height:1.5; }
-    .wf-task-item::before { content:'›'; position:absolute; left:0; color:var(--muted); }
+    .wf-task-item::before { content:'âº'; position:absolute; left:0; color:var(--muted); }
     .cycle-bar { padding:12px 20px; border-top:1px solid var(--border); background:#fafbff; }
     .cycle-label { font-size:10px; font-weight:700; color:var(--muted); letter-spacing:.4px; text-transform:uppercase; margin-bottom:8px; }
     .cycle-steps { display:flex; align-items:center; flex-wrap:wrap; gap:0; }
@@ -179,19 +179,19 @@
 <div class="header">
   <div class="header-left">
     <span class="logo-pmax">PMAX</span>
-    <span class="header-sep">×</span>
+    <span class="header-sep">Ã</span>
     <span class="logo-vas">VAS</span>
     <span class="header-title">Creative Workstream Dashboard</span>
   </div>
   <div style="display:flex;align-items:center;gap:10px">
-    <span class="badge-period">T4 – T9/2026</span>
-    <span class="badge-date" id="dateLabel">—</span>
+    <span class="badge-period">T4 â T9/2026</span>
+    <span class="badge-date" id="dateLabel">â</span>
   </div>
 </div>
 
 <!-- TAB NAV -->
 <div class="tab-nav" id="tabNav">
-  <button class="tab-btn active" onclick="showTab('overview',this)">📊 Overview</button>
+  <button class="tab-btn active" onclick="showTab('overview',this)">ð Overview</button>
 </div>
 
 <!-- OVERVIEW PANEL -->
@@ -199,44 +199,44 @@
 
   <!-- HOW-TO -->
   <div class="howto-banner">
-    <div class="howto-title">📌 Hướng dẫn sử dụng dashboard</div>
+    <div class="howto-title">ð HÆ°á»ng dáº«n sá»­ dá»¥ng dashboard</div>
     <div class="howto-grid">
       <div class="howto-item">
         <div class="howto-num">01</div>
         <div class="howto-label">Overview Tab</div>
-        <div class="howto-desc">Xem tổng quan 5 workstream: Gantt timeline theo tuần, % tiến độ, status on-track / at-risk và next step cần xử lý ngay.</div>
+        <div class="howto-desc">Xem tá»ng quan 5 workstream: Gantt timeline theo tuáº§n, % tiáº¿n Äá», status on-track / at-risk vÃ  next step cáº§n xá»­ lÃ½ ngay.</div>
       </div>
       <div class="howto-item">
         <div class="howto-num">02</div>
-        <div class="howto-label">Tab từng WS</div>
-        <div class="howto-desc">Click vào WS1–WS5 để xem bảng step-by-step chi tiết. Mỗi bước có PIC (PMAX/VAS/Joint), deadline và trạng thái cụ thể.</div>
+        <div class="howto-label">Tab tá»«ng WS</div>
+        <div class="howto-desc">Click vÃ o WS1âWS5 Äá» xem báº£ng step-by-step chi tiáº¿t. Má»i bÆ°á»c cÃ³ PIC (PMAX/VAS/Joint), deadline vÃ  tráº¡ng thÃ¡i cá»¥ thá».</div>
       </div>
       <div class="howto-item">
         <div class="howto-num">03</div>
         <div class="howto-label">Weekly Focus</div>
-        <div class="howto-desc">Đầu mỗi tab WS có card key focus tuần này — PMAX đang làm gì, VAS cần phối hợp gì và giai đoạn hiện tại trong chu kỳ sản xuất.</div>
+        <div class="howto-desc">Äáº§u má»i tab WS cÃ³ card key focus tuáº§n nÃ y â PMAX Äang lÃ m gÃ¬, VAS cáº§n phá»i há»£p gÃ¬ vÃ  giai Äoáº¡n hiá»n táº¡i trong chu ká»³ sáº£n xuáº¥t.</div>
       </div>
       <div class="howto-item">
         <div class="howto-num">04</div>
-        <div class="howto-label">Cập nhật data</div>
-        <div class="howto-desc">Mở file bằng text editor (Notepad/VS Code), tìm phần CONFIG ở đầu script, sửa status / steps / nextStep là dashboard tự cập nhật.</div>
+        <div class="howto-label">Cáº­p nháº­t data</div>
+        <div class="howto-desc">Má» file báº±ng text editor (Notepad/VS Code), tÃ¬m pháº§n CONFIG á» Äáº§u script, sá»­a status / steps / nextStep lÃ  dashboard tá»± cáº­p nháº­t.</div>
       </div>
     </div>
   </div>
 
   <!-- 01 SNAPSHOT -->
   <div class="section-header">
-    <span class="section-num">01 —</span>
+    <span class="section-num">01 â</span>
     <span class="section-title">Workstream Snapshot</span>
-    <span class="section-sub">Click card để xem chi tiết từng WS</span>
+    <span class="section-sub">Click card Äá» xem chi tiáº¿t tá»«ng WS</span>
   </div>
   <div class="summary-row" id="summaryCards"></div>
 
   <!-- 02 GANTT -->
   <div class="section-header">
-    <span class="section-num">02 —</span>
-    <span class="section-title">Timeline T4 → T9/2026</span>
-    <span class="section-sub">24 tuần · ◆ = milestone</span>
+    <span class="section-num">02 â</span>
+    <span class="section-title">Timeline T4 â T9/2026</span>
+    <span class="section-sub">24 tuáº§n Â· â = milestone</span>
   </div>
   <div class="gantt-wrapper">
     <table class="gantt-table" id="ganttTable"></table>
@@ -244,7 +244,7 @@
 
   <!-- 03 STATUS -->
   <div class="section-header">
-    <span class="section-num">03 —</span>
+    <span class="section-num">03 â</span>
     <span class="section-title">Status & Next Steps</span>
   </div>
   <div class="status-table-wrap">
@@ -264,13 +264,13 @@
 
   <!-- 04 IMPORT -->
   <div class="section-header mt-4">
-    <span class="section-num">04 —</span>
+    <span class="section-num">04 â</span>
     <span class="section-title">Google Sheet Integration</span>
     <span class="section-sub">Coming soon</span>
   </div>
   <div class="import-guide">
-    <div class="import-guide-title">📋 Format Google Sheet để import timeline tự động</div>
-    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Sheet cần có header row với các cột theo đúng thứ tự sau:</div>
+    <div class="import-guide-title">ð Format Google Sheet Äá» import timeline tá»± Äá»ng</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Sheet cáº§n cÃ³ header row vá»i cÃ¡c cá»t theo ÄÃºng thá»© tá»± sau:</div>
     <div class="import-cols">
       <span class="import-col-badge">Workstream</span>
       <span class="import-col-badge">Group</span>
@@ -282,7 +282,7 @@
       <span class="import-col-badge">Status</span>
     </div>
     <div style="font-size:11px;color:var(--muted);margin-top:10px">
-      Status: <code style="color:var(--accent)">done</code> / <code style="color:var(--accent)">inprog</code> / <code style="color:var(--accent)">upcoming</code> / <code style="color:var(--accent)">blocked</code> &nbsp;·&nbsp;
+      Status: <code style="color:var(--accent)">done</code> / <code style="color:var(--accent)">inprog</code> / <code style="color:var(--accent)">upcoming</code> / <code style="color:var(--accent)">blocked</code> &nbsp;Â·&nbsp;
       PIC: <code style="color:var(--pmax)">PMAX</code> / <code style="color:var(--vas)">VAS</code> / <code style="color:#7c3aed">Joint</code>
     </div>
   </div>
@@ -291,9 +291,9 @@
 <!-- WS panels injected by JS -->
 
 <script>
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 // CONFIG
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 const PRODUCTION_CYCLE = [
   'Plan','Script','Revise','Confirm','Shoot','Edit/Dung','Feedback','Revise','Confirm','Airing'
 ];
@@ -303,7 +303,7 @@ const MONTH_LABELS = {0:'T4',4:'T5',8:'T6',13:'T7',17:'T8',21:'T9'};
 const TODAY_WEEK   = 0;
 
 const WS = [
-  // ── WS1 ──
+  // ââ WS1 ââ
   {
     id:1, color:'#0ea5e9',
     name:'TikTok Channel Building',
@@ -311,7 +311,7 @@ const WS = [
     status:'on-track',
     ownerPmax:'Ideation & Content Strategy',
     ownerVas:'Production & Upload',
-    desc:'Xây dựng kênh TikTok VAS - plan tổng thể T4 gồm pillars & angles. PMAX incharge y tuong; VAS tu handle mot so angles tu quay den dung.',
+    desc:'XÃ¢y dá»±ng kÃªnh TikTok VAS - plan tá»ng thá» T4 gá»m pillars & angles. PMAX incharge y tuong; VAS tu handle mot so angles tu quay den dung.',
     currentProgress:'Brief & Pillar definition dang in-progress. Content plan T4 chua lock.',
     nextStep:'Lock content plan T4 - deadline T4W1 (30/3-5/4)',
     nextStepPic:'PMAX',
@@ -357,7 +357,7 @@ const WS = [
     ]
   },
 
-  // ── WS2 ──
+  // ââ WS2 ââ
   {
     id:2, color:'#f59e0b',
     name:'Sale Focus Videos',
@@ -411,58 +411,79 @@ const WS = [
     ]
   },
 
-  // ── WS3 ──
+  // ââ WS3 ââ
   {
     id:3, color:'#10b981',
     name:'Livestream Production',
     shortName:'Livestream',
     status:'on-track',
-    ownerPmax:'Script, setup & kich ban',
-    ownerVas:'Host, san pham & noi dung',
-    desc:'Phien livestream tuyen sinh dinh ky 1 lan/thang, tu thang 3 den thang 6/2026. Moi phien co quy trinh prep - script - rehearsal - live.',
-    currentProgress:'Phien T3 dang LIVE. Dang chuan bi outline cho phien T4.',
-    nextStep:'PMAX deliver outline phien T4 cho VAS review',
-    nextStepPic:'PMAX',
-    ganttStart:0, ganttEnd:14,
+    ownerPmax:'Script, Background & Setup',
+    ownerVas:'Host & Content',
+    desc:'Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.',
+    currentProgress:'Lich live 15/4 da confirm. Script dev R1 dang in-progress (deadline 1/4). Background layout dang revise. Host chua chon - VAS can action gap.',
+    nextStep:'VAS chon host & confirm (deadline 31/3) + feedback script outline',
+    nextStepPic:'VAS',
+    ganttStart:0, ganttEnd:3,
     weeklyFocus:{
-      cycleStage:'Plan', cycleIndex:0,
+      cycleStage:'Script', cycleIndex:1,
       focusPmax:[
-        'Tong ket phien T3: view, CTR, conversion rate',
-        'Draft outline & kich ban phien T4',
-        'Chuan bi checklist setup technical cho phien T4'
+        'Script dev detail R1 - hoan thien truoc 1/4',
+        'Background layout brief + chuan bi revise',
+        'Check background / propose studio layout'
       ],
       focusVas:[
-        'Confirm host va nguoi tham gia cho phien T4',
-        'Cung cap san pham/uu dai se gioi thieu trong phien T4',
-        'Feedback ve nhung gi chua tot tu phien T3'
+        '[URGENT] Chon host va confirm truoc 31/3',
+        'Feedback script outline (da in-progress tu 25/3)',
+        'Confirm studio va background concept'
       ]
     },
     phases:[
-      {name:'Phien T3 LIVE',week:0},{name:'Phien T4',week:3},
-      {name:'Phien T5',week:7},{name:'Phien T6',week:11}
+      {name:'Script final',week:2},{name:'GO LIVE 15/4',week:2},{name:'Amplify air',week:3}
     ],
     steps:[
-      {g:'PHIEN T3 (DANG LIVE)'},
-      {id:'1.1',task:'Outline & kich ban phien T3',pic:'PMAX',start:'10/3',end:'14/3',status:'done'},
-      {id:'1.2',task:'VAS approve kich ban',pic:'VAS',start:'15/3',end:'17/3',status:'done'},
-      {id:'1.3',task:'Rehearsal + setup technical',pic:'Joint',start:'24/3',end:'26/3',status:'done'},
-      {id:'1.4',task:'GO LIVE phien T3',pic:'Joint',start:'27/3',end:'27/3',status:'inprog'},
-      {id:'1.5',task:'Post-live report & tong ket',pic:'PMAX',start:'28/3',end:'30/3',status:'upcoming'},
-      {g:'PHIEN T4'},
-      {id:'2.1',task:'Tong ket phien T3 - insight & improvement',pic:'PMAX',start:'31/3',end:'2/4',status:'upcoming'},
-      {id:'2.2',task:'Draft outline phien T4',pic:'PMAX',start:'3/4',end:'5/4',status:'upcoming'},
-      {id:'2.3',task:'VAS confirm host + san pham phien T4',pic:'VAS',start:'3/4',end:'6/4',status:'upcoming'},
-      {id:'2.4',task:'VAS review outline phien T4',pic:'VAS',start:'7/4',end:'8/4',status:'upcoming'},
-      {id:'2.5',task:'Hoan thien kich ban chi tiet',pic:'PMAX',start:'9/4',end:'11/4',status:'upcoming'},
-      {id:'2.6',task:'Rehearsal phien T4',pic:'Joint',start:'14/4',end:'15/4',status:'upcoming'},
-      {id:'2.7',task:'GO LIVE phien T4',pic:'Joint',start:'17/4',end:'17/4',status:'upcoming'},
-      {g:'PHIEN T5 & T6'},
-      {id:'3.1',task:'Phien T5 - toan bo quy trinh',pic:'Joint',start:'1/5',end:'22/5',status:'upcoming'},
-      {id:'3.2',task:'Phien T6 - toan bo quy trinh',pic:'Joint',start:'1/6',end:'19/6',status:'upcoming'}
+      {g:'A. LIVESTREAM CALENDAR'},
+      {id:'A.1',task:'Dieu chinh va thong nhat lich live: 11h30-13h30 ngay 15/4',pic:'Joint',start:'25/3',end:'27/3',status:'done'},
+      {g:'B. HOST & STUDIO'},
+      {id:'B.1',task:'Host de xuat',pic:'PMAX',start:'25/3',end:'30/3',status:'inprog'},
+      {id:'B.2',task:'Chon host',pic:'VAS',start:'30/3',end:'31/3',status:'upcoming'},
+      {id:'B.3',task:'Book lich host & brief thong tin du an',pic:'PMAX',start:'31/3',end:'1/4',status:'upcoming'},
+      {g:'C. SCRIPT'},
+      {id:'C.1',task:'Script outline & chot khach moi',pic:'Joint',start:'25/3',end:'27/3',status:'inprog'},
+      {id:'C.2',task:'Script dev detail R1',pic:'PMAX',start:'27/3',end:'1/4',status:'inprog'},
+      {id:'C.3',task:'Anh Trac QC & chinh sua',pic:'PMAX',start:'1/4',end:'3/4',status:'upcoming'},
+      {id:'C.4',task:'Feedback script R1',pic:'VAS',start:'3/4',end:'5/4',status:'upcoming'},
+      {id:'C.5',task:'Script dev detail R2',pic:'PMAX',start:'6/4',end:'11/4',status:'upcoming'},
+      {id:'C.6',task:'Feedback & final script',pic:'Joint',start:'11/4',end:'13/4',status:'upcoming'},
+      {g:'D. BACKGROUND LIVESTREAM'},
+      {id:'D.1',task:'Background layout brief (Tittle: Buoi 2 - Kien tao moi truong hoc tap toan dien)',pic:'PMAX',start:'26/3',end:'30/3',status:'inprog'},
+      {id:'D.2',task:'Feedback & Dieu chinh + Confirm thong tin tren layout',pic:'VAS',start:'30/3',end:'31/3',status:'upcoming'},
+      {id:'D.3',task:'Background final',pic:'Joint',start:'30/3',end:'2/4',status:'upcoming'},
+      {g:'E. CHECK BACKGROUND / STUDIO'},
+      {id:'E.1',task:'Propose Studio layout',pic:'PMAX',start:'27/3',end:'27/3',status:'inprog'},
+      {id:'E.2',task:'Confirm studio',pic:'VAS',start:'27/3',end:'28/3',status:'upcoming'},
+      {g:'F. DECOR'},
+      {id:'F.1',task:'Cac do can muon cua truong (dua theo kich thuoc ke studio)',pic:'Joint',start:'8/4',end:'12/4',status:'upcoming'},
+      {g:'G. CAPTION LIVESTREAM'},
+      {id:'G.1',task:'Caption Facebook',pic:'Joint',start:'8/4',end:'14/4',status:'upcoming'},
+      {g:'H. LIVESTREAM SET UP TAI STUDIO'},
+      {id:'H.1',task:'Final check & set up (Equipment, Background, Leadform, Caption, Seeding, Ads, Host)',pic:'PMAX',start:'15/4',end:'15/4',status:'upcoming'},
+      {g:'I. CREATIVE PRODUCTION â Teasing'},
+      {id:'I.1.1',task:'Propose Idea - Teasing content',pic:'PMAX',start:'3/4',end:'3/4',status:'inprog'},
+      {id:'I.1.2',task:'Client Confirm - Teasing',pic:'VAS',start:'4/4',end:'4/4',status:'upcoming'},
+      {id:'I.1.3',task:'Production - Teasing',pic:'PMAX',start:'6/4',end:'8/4',status:'upcoming'},
+      {id:'I.1.4',task:'Airing - Teasing',pic:'PMAX',start:'9/4',end:'9/4',status:'upcoming'},
+      {g:'I. CREATIVE PRODUCTION â During Live'},
+      {id:'I.2.1',task:'Production post Livestream => Chot caption',pic:'PMAX',start:'13/4',end:'14/4',status:'upcoming'},
+      {id:'I.2.2',task:'Airing post-live content',pic:'PMAX',start:'15/4',end:'15/4',status:'upcoming'},
+      {g:'I. CREATIVE PRODUCTION â Amplify'},
+      {id:'I.3.1',task:'Propose Idea - Amplify content',pic:'PMAX',start:'16/4',end:'16/4',status:'upcoming'},
+      {id:'I.3.2',task:'Client Confirm - Amplify',pic:'VAS',start:'17/4',end:'17/4',status:'upcoming'},
+      {id:'I.3.3',task:'Production - Amplify',pic:'PMAX',start:'18/4',end:'20/4',status:'upcoming'},
+      {id:'I.3.4',task:'Airing - Amplify',pic:'PMAX',start:'21/4',end:'21/4',status:'upcoming'}
     ]
   },
 
-  // ── WS4 ──
+  // ââ WS4 ââ
   {
     id:4, color:'#8b5cf6',
     name:"Branding / Hero Assets - Parent's POV",
@@ -492,7 +513,7 @@ const WS = [
       {name:'Teasing Launch',week:2},{name:'Cutdown Air',week:5},{name:'Interview Air',week:7}
     ],
     steps:[
-      {g:"I. TEASING — Video 'Trai nghiem thuc thu cua VASer'"},
+      {g:"I. TEASING â Video 'Trai nghiem thuc thu cua VASer'"},
       {id:'1.1',task:'Brief & script concept cho teasing video',pic:'Joint',start:'17/3',end:'18/3',status:'done'},
       {id:'1.2',task:'Script draft v1',pic:'PMAX',start:'18/3',end:'20/3',status:'done'},
       {id:'1.3',task:'VAS review script v1',pic:'VAS',start:'21/3',end:'22/3',status:'done'},
@@ -504,7 +525,7 @@ const WS = [
       {id:'1.9',task:'Revise theo feedback',pic:'PMAX',start:'7/4',end:'9/4',status:'upcoming'},
       {id:'1.10',task:'VAS final approve',pic:'VAS',start:'10/4',end:'10/4',status:'upcoming'},
       {id:'1.11',task:'Airing Teasing Video',pic:'Joint',start:'11/4',end:'11/4',status:'upcoming'},
-      {g:'I. TEASING — Social Post'},
+      {g:'I. TEASING â Social Post'},
       {id:'2.1',task:'Brief noi dung social teasing',pic:'Joint',start:'20/3',end:'21/3',status:'done'},
       {id:'2.2',task:'Design 5 social posts teasing',pic:'PMAX',start:'22/3',end:'25/3',status:'done'},
       {id:'2.3',task:'VAS review posts teasing',pic:'VAS',start:'26/3',end:'27/3',status:'inprog'},
@@ -512,13 +533,13 @@ const WS = [
       {id:'2.5',task:'VAS final approve social posts',pic:'VAS',start:'30/3',end:'30/3',status:'upcoming'},
       {id:'2.6',task:'Len lich dang teasing posts',pic:'PMAX',start:'31/3',end:'31/3',status:'upcoming'},
       {id:'2.7',task:'Airing social posts teasing',pic:'Joint',start:'1/4',end:'10/4',status:'upcoming'},
-      {g:'II. LAUNCHING — Main Film'},
+      {g:'II. LAUNCHING â Main Film'},
       {id:'3.1',task:'Script & storyboard Main Film',pic:'PMAX',start:'1/3',end:'10/3',status:'done'},
       {id:'3.2',task:'VAS approve script Main Film',pic:'VAS',start:'11/3',end:'13/3',status:'done'},
       {id:'3.3',task:'Quay Main Film (location VAS campus)',pic:'Joint',start:'14/3',end:'16/3',status:'done'},
       {id:'3.4',task:'Edit + color grade + sound mix',pic:'PMAX',start:'17/3',end:'26/3',status:'done'},
       {id:'3.5',task:'Airing Main Film (FB/YT/Zalo OA)',pic:'Joint',start:'28/3',end:'8/4',status:'inprog'},
-      {g:'III. AMPLIFYING — Cutdown 30s'},
+      {g:'III. AMPLIFYING â Cutdown 30s'},
       {id:'4.1',task:'Brief concept cutdown 30s tu Main Film',pic:'Joint',start:'28/3',end:'29/3',status:'done'},
       {id:'4.2',task:'Script cutdown 30s v1',pic:'PMAX',start:'30/3',end:'31/3',status:'done'},
       {id:'4.3',task:'VAS review script cutdown',pic:'VAS',start:'1/4',end:'2/4',status:'inprog'},
@@ -530,7 +551,7 @@ const WS = [
       {id:'4.9',task:'VAS final approve',pic:'VAS',start:'14/4',end:'14/4',status:'upcoming'},
       {id:'4.10',task:'Export + deliver file final',pic:'PMAX',start:'15/4',end:'15/4',status:'upcoming'},
       {id:'4.11',task:'Airing Cutdown 30s (paid + organic)',pic:'Joint',start:'16/4',end:'30/4',status:'upcoming'},
-      {g:"III. AMPLIFYING — Interview Video 'Ba me nghi gi'"},
+      {g:"III. AMPLIFYING â Interview Video 'Ba me nghi gi'"},
       {id:'5.1',task:'Concept + format interview video',pic:'Joint',start:'1/4',end:'2/4',status:'upcoming'},
       {id:'5.2',task:'Brief casting (3 cap phu huynh + hoc sinh)',pic:'PMAX',start:'2/4',end:'3/4',status:'upcoming'},
       {id:'5.3',task:'VAS confirm casting list',pic:'VAS',start:'4/4',end:'5/4',status:'inprog'},
@@ -550,7 +571,7 @@ const WS = [
     ]
   },
 
-  // ── WS5 ──
+  // ââ WS5 ââ
   {
     id:5, color:'#f97316',
     name:'AWO for Performance',
@@ -604,9 +625,9 @@ const WS = [
   }
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 // HELPERS
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 const d = new Date();
 document.getElementById('dateLabel').textContent =
   d.toLocaleDateString('vi-VN',{day:'2-digit',month:'2-digit',year:'numeric'});
@@ -632,9 +653,9 @@ function calcProgress(ws){
   return Math.round((done + inprog*0.5)/steps.length*100);
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 // RENDER: SUMMARY CARDS
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function renderSummaryCards(){
   document.getElementById('summaryCards').innerHTML = WS.map(ws=>{
     const pct = calcProgress(ws);
@@ -657,9 +678,9 @@ function renderSummaryCards(){
   }).join('');
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 // RENDER: GANTT
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function renderGantt(){
   const t = document.getElementById('ganttTable');
   const numWeeks = 24;
@@ -695,7 +716,7 @@ function renderGantt(){
     }
     return `<tr>
       <td class="ws-label">
-        <div class="g-ws-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ws.color};margin-right:6px;vertical-align:middle"></span>WS${ws.id} · ${ws.shortName}</div>
+        <div class="g-ws-name"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ws.color};margin-right:6px;vertical-align:middle"></span>WS${ws.id} Â· ${ws.shortName}</div>
         <div class="g-ws-sub" style="padding-left:14px">${ws.ownerPmax}</div>
       </td>${cells}
     </tr>`;
@@ -704,9 +725,9 @@ function renderGantt(){
   t.innerHTML = hdr + rows;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 // RENDER: STATUS TABLE
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function renderStatusTable(){
   document.getElementById('statusBody').innerHTML = WS.map(ws=>`
     <tr>
@@ -714,7 +735,7 @@ function renderStatusTable(){
         <div style="display:flex;align-items:center">
           <span class="ws-color-bar" style="background:${ws.color}"></span>
           <div>
-            <div class="st-ws-name">WS${ws.id} · ${ws.shortName}</div>
+            <div class="st-ws-name">WS${ws.id} Â· ${ws.shortName}</div>
             <div class="st-ws-short">${ws.name}</div>
           </div>
         </div>
@@ -726,9 +747,9 @@ function renderStatusTable(){
     </tr>`).join('');
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 // RENDER: WS DETAIL TABS
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function renderWSTabs(){
   const nav  = document.getElementById('tabNav');
   const body = document.body;
@@ -736,7 +757,7 @@ function renderWSTabs(){
     const btn = document.createElement('button');
     btn.className = 'tab-btn';
     btn.setAttribute('data-wsid', ws.id);
-    btn.innerHTML = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ws.color};margin-right:6px;vertical-align:middle"></span>WS${ws.id} · ${ws.shortName}`;
+    btn.innerHTML = `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${ws.color};margin-right:6px;vertical-align:middle"></span>WS${ws.id} Â· ${ws.shortName}`;
     btn.onclick = function(){ showTab('ws'+ws.id, this); };
     nav.appendChild(btn);
 
@@ -752,7 +773,7 @@ function buildWSPanel(ws){
   const pct = calcProgress(ws);
   const cycleHTML = PRODUCTION_CYCLE.map((name,i)=>{
     const cls = i<ws.weeklyFocus.cycleIndex?'done':i===ws.weeklyFocus.cycleIndex?'active':'upcoming';
-    const arrow = i<PRODUCTION_CYCLE.length-1?'<span class="cycle-arrow">›</span>':'';
+    const arrow = i<PRODUCTION_CYCLE.length-1?'<span class="cycle-arrow">âº</span>':'';
     return `<div class="cycle-step"><span class="cycle-node ${cls}">${name}</span>${arrow}</div>`;
   }).join('');
 
@@ -772,7 +793,7 @@ function buildWSPanel(ws){
   return `
   <div class="ws-detail-header">
     <div>
-      <div class="ws-detail-title"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${ws.color};margin-right:8px;vertical-align:middle"></span>WS${ws.id} · ${ws.name}</div>
+      <div class="ws-detail-title"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${ws.color};margin-right:8px;vertical-align:middle"></span>WS${ws.id} Â· ${ws.name}</div>
       <div class="ws-detail-sub">${ws.desc}</div>
     </div>
     <div class="ws-detail-meta">
@@ -785,21 +806,21 @@ function buildWSPanel(ws){
 
   <div class="weekly-focus">
     <div class="wf-header">
-      <span class="wf-title">🎯 Key Focus Tuần Này</span>
-      <span class="wf-week">Week ${TODAY_WEEK+1} · 30/3 – 5/4/2026</span>
+      <span class="wf-title">ð¯ Key Focus Tuáº§n NÃ y</span>
+      <span class="wf-week">Week ${TODAY_WEEK+1} Â· 30/3 â 5/4/2026</span>
     </div>
     <div class="wf-body">
       <div class="wf-col">
-        <div class="wf-col-label pmax-label"><span class="wf-col-dot" style="background:var(--pmax)"></span>PMAX đang làm</div>
+        <div class="wf-col-label pmax-label"><span class="wf-col-dot" style="background:var(--pmax)"></span>PMAX Äang lÃ m</div>
         <div class="wf-tasks">${ws.weeklyFocus.focusPmax.map(t=>`<div class="wf-task-item">${t}</div>`).join('')}</div>
       </div>
       <div class="wf-col">
-        <div class="wf-col-label vas-label"><span class="wf-col-dot" style="background:var(--vas)"></span>VAS cần phối hợp</div>
+        <div class="wf-col-label vas-label"><span class="wf-col-dot" style="background:var(--vas)"></span>VAS cáº§n phá»i há»£p</div>
         <div class="wf-tasks">${ws.weeklyFocus.focusVas.map(t=>`<div class="wf-task-item">${t}</div>`).join('')}</div>
       </div>
     </div>
     <div class="cycle-bar">
-      <div class="cycle-label">Chu kỳ sản xuất · Đang ở: <strong style="color:var(--accent)">${ws.weeklyFocus.cycleStage}</strong></div>
+      <div class="cycle-label">Chu ká»³ sáº£n xuáº¥t Â· Äang á»: <strong style="color:var(--accent)">${ws.weeklyFocus.cycleStage}</strong></div>
       <div class="cycle-steps">${cycleHTML}</div>
     </div>
   </div>
@@ -819,9 +840,9 @@ function buildWSPanel(ws){
   </div>`;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 // TAB SYSTEM
-// ─────────────────────────────────────────────────────────────────────────────
+// âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
 function showTab(id, btn){
   document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
