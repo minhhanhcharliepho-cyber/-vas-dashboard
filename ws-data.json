@@ -1,0 +1,1342 @@
+[
+  {
+    "id": 1,
+    "color": "#0ea5e9",
+    "name": "TikTok Channel Building",
+    "shortName": "TikTok Build",
+    "status": "on-track",
+    "ownerPmax": "Ideation & Content Strategy",
+    "ownerVas": "Production & Upload",
+    "desc": "Xây dựng kênh TikTok VAS - plan tổng thể T4 gồm pillars & angles. PMAX incharge y tuong; VAS tu handle mot so angles tu quay den dung.",
+    "currentProgress": "Brief & Pillar definition dang in-progress. Content plan T4 chua lock.",
+    "nextStep": "Lock content plan T4 - deadline T4W1 (30/3-5/4)",
+    "nextStepPic": "PMAX",
+    "ganttStart": 0,
+    "ganttEnd": 23,
+    "weeklyFocus": {
+      "cycleStage": "Plan",
+      "cycleIndex": 0,
+      "focusPmax": [
+        "Hoan thien Pillar definition & angle strategy cho TikTok",
+        "Draft content plan thang 4 (topic list + format)",
+        "Setup quy trinh duyet: concept approval truoc khi VAS xuong production"
+      ],
+      "focusVas": [
+        "Confirm phan chia angles: PMAX lead vs VAS self-produce",
+        "Cung cap reference va yeu cau ve tone/style",
+        "Assign nguoi phu trach production & upload phia VAS"
+      ]
+    },
+    "phases": [
+      {
+        "name": "Content plan T4",
+        "week": 1
+      },
+      {
+        "name": "Batch T4 publish",
+        "week": 4
+      },
+      {
+        "name": "Content plan T5",
+        "week": 5
+      },
+      {
+        "name": "Content plan T6",
+        "week": 9
+      },
+      {
+        "name": "Content plan T7",
+        "week": 13
+      },
+      {
+        "name": "Content plan T8",
+        "week": 17
+      },
+      {
+        "name": "Wrap-up T9",
+        "week": 22
+      }
+    ],
+    "steps": [
+      {
+        "g": "THANG 4 - SETUP & BATCH 1"
+      },
+      {
+        "id": "1.1",
+        "task": "Brief & Pillar definition session",
+        "pic": "Joint",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "inprog"
+      },
+      {
+        "id": "1.2",
+        "task": "PMAX draft content plan T4 (topics + format)",
+        "pic": "PMAX",
+        "start": "1/4",
+        "end": "2/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.3",
+        "task": "VAS review & confirm phan chia angles",
+        "pic": "VAS",
+        "start": "3/4",
+        "end": "4/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.4",
+        "task": "Lock content calendar T4",
+        "pic": "Joint",
+        "start": "5/4",
+        "end": "5/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.5",
+        "task": "Production batch 1 kickoff (PMAX lead angles)",
+        "pic": "PMAX",
+        "start": "7/4",
+        "end": "12/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.6",
+        "task": "VAS self-produce angles (theo phan cong)",
+        "pic": "VAS",
+        "start": "7/4",
+        "end": "14/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.7",
+        "task": "Review & approve truoc khi dang",
+        "pic": "PMAX",
+        "start": "13/4",
+        "end": "14/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.8",
+        "task": "Publish batch 1 TikTok",
+        "pic": "Joint",
+        "start": "15/4",
+        "end": "30/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "THANG 5 - BATCH 2"
+      },
+      {
+        "id": "2.1",
+        "task": "Content plan T5 - brief & topics",
+        "pic": "PMAX",
+        "start": "28/4",
+        "end": "30/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.2",
+        "task": "VAS approve content plan T5",
+        "pic": "VAS",
+        "start": "1/5",
+        "end": "2/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.3",
+        "task": "Production batch 2",
+        "pic": "Joint",
+        "start": "3/5",
+        "end": "17/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.4",
+        "task": "Publish batch 2 TikTok",
+        "pic": "Joint",
+        "start": "18/5",
+        "end": "31/5",
+        "status": "upcoming"
+      },
+      {
+        "g": "THANG 6-9 - ONGOING"
+      },
+      {
+        "id": "3.1",
+        "task": "Content plan T6 + production",
+        "pic": "Joint",
+        "start": "1/6",
+        "end": "30/6",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.2",
+        "task": "Content plan T7 + production",
+        "pic": "Joint",
+        "start": "1/7",
+        "end": "31/7",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.3",
+        "task": "Content plan T8 + production",
+        "pic": "Joint",
+        "start": "1/8",
+        "end": "31/8",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.4",
+        "task": "Content plan T9 + wrap-up report",
+        "pic": "Joint",
+        "start": "1/9",
+        "end": "30/9",
+        "status": "upcoming"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "color": "#f59e0b",
+    "name": "Sale Focus Videos",
+    "shortName": "Sale Videos",
+    "status": "on-track",
+    "ownerPmax": "Full production (ca 2 pack)",
+    "ownerVas": "Brief, footage & approval",
+    "desc": "2 production pack: Pack 1 - Utilize footage co san (nhanh hon). Pack 2 - Quay moi hoan toan. Muc tieu push sale tuyen sinh.",
+    "currentProgress": "Brief & Concept 2 pack dang in-progress. PMAX chuan bi proposal.",
+    "nextStep": "PMAX deliver concept + script 2 pack cho VAS review",
+    "nextStepPic": "PMAX",
+    "ganttStart": 0,
+    "ganttEnd": 10,
+    "weeklyFocus": {
+      "cycleStage": "Script",
+      "cycleIndex": 1,
+      "focusPmax": [
+        "Hoan thien concept & script Pack 1 (utilize footage)",
+        "Xem xet footage co san cua VAS de chon loc",
+        "Brief concept Pack 2 (quay moi)"
+      ],
+      "focusVas": [
+        "Provide footage co san cho PMAX review",
+        "Confirm USP va key message cho tung pack",
+        "Schedule ngay review concept: tuan 31/3-4/4"
+      ]
+    },
+    "phases": [
+      {
+        "name": "Pack 1 concept",
+        "week": 1
+      },
+      {
+        "name": "Pack 1 deliver",
+        "week": 3
+      },
+      {
+        "name": "Pack 2 quay",
+        "week": 5
+      },
+      {
+        "name": "Pack 2 deliver",
+        "week": 9
+      }
+    ],
+    "steps": [
+      {
+        "g": "PACK 1 - UTILIZE FOOTAGE"
+      },
+      {
+        "id": "1.1",
+        "task": "Brief & concept Pack 1",
+        "pic": "Joint",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "inprog"
+      },
+      {
+        "id": "1.2",
+        "task": "VAS provide footage library",
+        "pic": "VAS",
+        "start": "30/3",
+        "end": "2/4",
+        "status": "inprog"
+      },
+      {
+        "id": "1.3",
+        "task": "Script Pack 1 (su dung footage cu)",
+        "pic": "PMAX",
+        "start": "1/4",
+        "end": "3/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.4",
+        "task": "VAS review & approve script",
+        "pic": "VAS",
+        "start": "4/4",
+        "end": "5/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.5",
+        "task": "Edit Pack 1 tu footage co san",
+        "pic": "PMAX",
+        "start": "6/4",
+        "end": "10/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.6",
+        "task": "VAS review cut v1",
+        "pic": "VAS",
+        "start": "11/4",
+        "end": "12/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.7",
+        "task": "Revise & final cut Pack 1",
+        "pic": "PMAX",
+        "start": "13/4",
+        "end": "14/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.8",
+        "task": "VAS final approve Pack 1",
+        "pic": "VAS",
+        "start": "15/4",
+        "end": "15/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.9",
+        "task": "Deliver & airing Pack 1",
+        "pic": "Joint",
+        "start": "16/4",
+        "end": "16/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "PACK 2 - QUAY MOI"
+      },
+      {
+        "id": "2.1",
+        "task": "Brief & concept Pack 2",
+        "pic": "Joint",
+        "start": "7/4",
+        "end": "9/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.2",
+        "task": "Script Pack 2",
+        "pic": "PMAX",
+        "start": "10/4",
+        "end": "13/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.3",
+        "task": "VAS approve script Pack 2",
+        "pic": "VAS",
+        "start": "14/4",
+        "end": "15/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.4",
+        "task": "Casting & location setup",
+        "pic": "PMAX",
+        "start": "16/4",
+        "end": "18/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.5",
+        "task": "Quay Pack 2",
+        "pic": "Joint",
+        "start": "21/4",
+        "end": "22/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.6",
+        "task": "Edit & post-production Pack 2",
+        "pic": "PMAX",
+        "start": "23/4",
+        "end": "30/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.7",
+        "task": "VAS review & feedback",
+        "pic": "VAS",
+        "start": "1/5",
+        "end": "3/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.8",
+        "task": "Final cut & deliver Pack 2",
+        "pic": "PMAX",
+        "start": "4/5",
+        "end": "7/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.9",
+        "task": "Airing Pack 2",
+        "pic": "Joint",
+        "start": "8/5",
+        "end": "8/5",
+        "status": "upcoming"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "color": "#10b981",
+    "name": "Livestream Production",
+    "shortName": "Livestream",
+    "status": "on-track",
+    "ownerPmax": "Script, Background & Setup",
+    "ownerVas": "Host & Content",
+    "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
+    "currentProgress": "Lich live 15/4 da confirm. Script dev R1 dang in-progress (deadline 1/4). Background layout dang revise. Host chua chon - VAS can action gap.",
+    "nextStep": "VAS chon host & confirm (deadline 31/3) + feedback script outline",
+    "nextStepPic": "VAS",
+    "ganttStart": 0,
+    "ganttEnd": 3,
+    "weeklyFocus": {
+      "cycleStage": "Script",
+      "cycleIndex": 1,
+      "focusPmax": [
+        "Script dev detail R1 - hoan thien truoc 1/4",
+        "Background layout brief + chuan bi revise",
+        "Check background / propose studio layout"
+      ],
+      "focusVas": [
+        "[URGENT] Chon host va confirm truoc 31/3",
+        "Feedback script outline (da in-progress tu 25/3)",
+        "Confirm studio va background concept"
+      ]
+    },
+    "phases": [
+      {
+        "name": "Script final",
+        "week": 2
+      },
+      {
+        "name": "GO LIVE 15/4",
+        "week": 2
+      },
+      {
+        "name": "Amplify air",
+        "week": 3
+      }
+    ],
+    "steps": [
+      {
+        "g": "A. LIVESTREAM CALENDAR"
+      },
+      {
+        "id": "A.1",
+        "task": "Dieu chinh va thong nhat lich live: 11h30-13h30 ngay 15/4",
+        "pic": "Joint",
+        "start": "25/3",
+        "end": "27/3",
+        "status": "done"
+      },
+      {
+        "g": "B. HOST & STUDIO"
+      },
+      {
+        "id": "B.1",
+        "task": "Host de xuat",
+        "pic": "PMAX",
+        "start": "25/3",
+        "end": "30/3",
+        "status": "inprog"
+      },
+      {
+        "id": "B.2",
+        "task": "Chon host",
+        "pic": "VAS",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "upcoming"
+      },
+      {
+        "id": "B.3",
+        "task": "Book lich host & brief thong tin du an",
+        "pic": "PMAX",
+        "start": "31/3",
+        "end": "1/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "C. SCRIPT"
+      },
+      {
+        "id": "C.1",
+        "task": "Script outline & chot khach moi",
+        "pic": "Joint",
+        "start": "25/3",
+        "end": "27/3",
+        "status": "inprog"
+      },
+      {
+        "id": "C.2",
+        "task": "Script dev detail R1",
+        "pic": "PMAX",
+        "start": "27/3",
+        "end": "1/4",
+        "status": "inprog"
+      },
+      {
+        "id": "C.3",
+        "task": "Anh Trac QC & chinh sua",
+        "pic": "PMAX",
+        "start": "1/4",
+        "end": "3/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "C.4",
+        "task": "Feedback script R1",
+        "pic": "VAS",
+        "start": "3/4",
+        "end": "5/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "C.5",
+        "task": "Script dev detail R2",
+        "pic": "PMAX",
+        "start": "6/4",
+        "end": "11/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "C.6",
+        "task": "Feedback & final script",
+        "pic": "Joint",
+        "start": "11/4",
+        "end": "13/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "D. BACKGROUND LIVESTREAM"
+      },
+      {
+        "id": "D.1",
+        "task": "Background layout brief (Tittle: Buoi 2 - Kien tao moi truong hoc tap toan dien)",
+        "pic": "PMAX",
+        "start": "26/3",
+        "end": "30/3",
+        "status": "inprog"
+      },
+      {
+        "id": "D.2",
+        "task": "Feedback & Dieu chinh + Confirm thong tin tren layout",
+        "pic": "VAS",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "upcoming"
+      },
+      {
+        "id": "D.3",
+        "task": "Background final",
+        "pic": "Joint",
+        "start": "30/3",
+        "end": "2/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "E. CHECK BACKGROUND / STUDIO"
+      },
+      {
+        "id": "E.1",
+        "task": "Propose Studio layout",
+        "pic": "PMAX",
+        "start": "27/3",
+        "end": "27/3",
+        "status": "inprog"
+      },
+      {
+        "id": "E.2",
+        "task": "Confirm studio",
+        "pic": "VAS",
+        "start": "27/3",
+        "end": "28/3",
+        "status": "upcoming"
+      },
+      {
+        "g": "F. DECOR"
+      },
+      {
+        "id": "F.1",
+        "task": "Cac do can muon cua truong (dua theo kich thuoc ke studio)",
+        "pic": "Joint",
+        "start": "8/4",
+        "end": "12/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "G. CAPTION LIVESTREAM"
+      },
+      {
+        "id": "G.1",
+        "task": "Caption Facebook",
+        "pic": "Joint",
+        "start": "8/4",
+        "end": "14/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "H. LIVESTREAM SET UP TAI STUDIO"
+      },
+      {
+        "id": "H.1",
+        "task": "Final check & set up (Equipment, Background, Leadform, Caption, Seeding, Ads, Host)",
+        "pic": "PMAX",
+        "start": "15/4",
+        "end": "15/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "I. CREATIVE PRODUCTION — Teasing"
+      },
+      {
+        "id": "I.1.1",
+        "task": "Propose Idea - Teasing content",
+        "pic": "PMAX",
+        "start": "3/4",
+        "end": "3/4",
+        "status": "inprog"
+      },
+      {
+        "id": "I.1.2",
+        "task": "Client Confirm - Teasing",
+        "pic": "VAS",
+        "start": "4/4",
+        "end": "4/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "I.1.3",
+        "task": "Production - Teasing",
+        "pic": "PMAX",
+        "start": "6/4",
+        "end": "8/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "I.1.4",
+        "task": "Airing - Teasing",
+        "pic": "PMAX",
+        "start": "9/4",
+        "end": "9/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "I. CREATIVE PRODUCTION — During Live"
+      },
+      {
+        "id": "I.2.1",
+        "task": "Production post Livestream => Chot caption",
+        "pic": "PMAX",
+        "start": "13/4",
+        "end": "14/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "I.2.2",
+        "task": "Airing post-live content",
+        "pic": "PMAX",
+        "start": "15/4",
+        "end": "15/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "I. CREATIVE PRODUCTION — Amplify"
+      },
+      {
+        "id": "I.3.1",
+        "task": "Propose Idea - Amplify content",
+        "pic": "PMAX",
+        "start": "16/4",
+        "end": "16/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "I.3.2",
+        "task": "Client Confirm - Amplify",
+        "pic": "VAS",
+        "start": "17/4",
+        "end": "17/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "I.3.3",
+        "task": "Production - Amplify",
+        "pic": "PMAX",
+        "start": "18/4",
+        "end": "20/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "I.3.4",
+        "task": "Airing - Amplify",
+        "pic": "PMAX",
+        "start": "21/4",
+        "end": "21/4",
+        "status": "upcoming"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "color": "#8b5cf6",
+    "name": "Branding / Hero Assets - Parent's POV",
+    "shortName": "Hero Assets",
+    "status": "on-track",
+    "ownerPmax": "Creative + Video",
+    "ownerVas": "Admission Dept",
+    "desc": "Series hero content nhin tu goc do phu huynh VASer: teasing video, main film, cutdown 30s va interview 'Ba me nghi gi'. Workstream trong tam cua campaign Admission T4-T5/2026.",
+    "currentProgress": "Teasing video dang dung (rough cut). Main Film da airing 28/3. Cutdown 30s dang revise script. Interview casting chua confirm.",
+    "nextStep": "Confirm script cutdown 30s + schedule casting interview",
+    "nextStepPic": "VAS",
+    "ganttStart": 0,
+    "ganttEnd": 8,
+    "weeklyFocus": {
+      "cycleStage": "Edit/Dung",
+      "cycleIndex": 5,
+      "focusPmax": [
+        "Dung Teasing Video VASer (ban rough cut)",
+        "Revise script Cutdown 30s lan 2",
+        "Chuan bi brief casting cho Interview Ba me nghi gi"
+      ],
+      "focusVas": [
+        "Review rough cut Teasing Video",
+        "Confirm script Cutdown 30s",
+        "Confirm danh sach casting cho Interview (deadline 5/4)"
+      ]
+    },
+    "phases": [
+      {
+        "name": "Teasing Launch",
+        "week": 2
+      },
+      {
+        "name": "Cutdown Air",
+        "week": 5
+      },
+      {
+        "name": "Interview Air",
+        "week": 7
+      }
+    ],
+    "steps": [
+      {
+        "g": "I. TEASING — Video 'Trai nghiem thuc thu cua VASer'"
+      },
+      {
+        "id": "1.1",
+        "task": "Brief & script concept cho teasing video",
+        "pic": "Joint",
+        "start": "17/3",
+        "end": "18/3",
+        "status": "done"
+      },
+      {
+        "id": "1.2",
+        "task": "Script draft v1",
+        "pic": "PMAX",
+        "start": "18/3",
+        "end": "20/3",
+        "status": "done"
+      },
+      {
+        "id": "1.3",
+        "task": "VAS review script v1",
+        "pic": "VAS",
+        "start": "21/3",
+        "end": "22/3",
+        "status": "done"
+      },
+      {
+        "id": "1.4",
+        "task": "Revise script v2",
+        "pic": "PMAX",
+        "start": "23/3",
+        "end": "24/3",
+        "status": "done"
+      },
+      {
+        "id": "1.5",
+        "task": "VAS approve script final",
+        "pic": "VAS",
+        "start": "25/3",
+        "end": "25/3",
+        "status": "done"
+      },
+      {
+        "id": "1.6",
+        "task": "Shoot teasing video tai truong VAS",
+        "pic": "Joint",
+        "start": "26/3",
+        "end": "27/3",
+        "status": "inprog"
+      },
+      {
+        "id": "1.7",
+        "task": "Edit / Dung rough cut",
+        "pic": "PMAX",
+        "start": "28/3",
+        "end": "3/4",
+        "status": "inprog"
+      },
+      {
+        "id": "1.8",
+        "task": "VAS review rough cut",
+        "pic": "VAS",
+        "start": "4/4",
+        "end": "6/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.9",
+        "task": "Revise theo feedback",
+        "pic": "PMAX",
+        "start": "7/4",
+        "end": "9/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.10",
+        "task": "VAS final approve",
+        "pic": "VAS",
+        "start": "10/4",
+        "end": "10/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.11",
+        "task": "Airing Teasing Video",
+        "pic": "Joint",
+        "start": "11/4",
+        "end": "11/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "I. TEASING — Social Post"
+      },
+      {
+        "id": "2.1",
+        "task": "Brief noi dung social teasing",
+        "pic": "Joint",
+        "start": "20/3",
+        "end": "21/3",
+        "status": "done"
+      },
+      {
+        "id": "2.2",
+        "task": "Design 5 social posts teasing",
+        "pic": "PMAX",
+        "start": "22/3",
+        "end": "25/3",
+        "status": "done"
+      },
+      {
+        "id": "2.3",
+        "task": "VAS review posts teasing",
+        "pic": "VAS",
+        "start": "26/3",
+        "end": "27/3",
+        "status": "inprog"
+      },
+      {
+        "id": "2.4",
+        "task": "Chinh sua theo feedback",
+        "pic": "PMAX",
+        "start": "28/3",
+        "end": "29/3",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.5",
+        "task": "VAS final approve social posts",
+        "pic": "VAS",
+        "start": "30/3",
+        "end": "30/3",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.6",
+        "task": "Len lich dang teasing posts",
+        "pic": "PMAX",
+        "start": "31/3",
+        "end": "31/3",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.7",
+        "task": "Airing social posts teasing",
+        "pic": "Joint",
+        "start": "1/4",
+        "end": "10/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "II. LAUNCHING — Main Film"
+      },
+      {
+        "id": "3.1",
+        "task": "Script & storyboard Main Film",
+        "pic": "PMAX",
+        "start": "1/3",
+        "end": "10/3",
+        "status": "done"
+      },
+      {
+        "id": "3.2",
+        "task": "VAS approve script Main Film",
+        "pic": "VAS",
+        "start": "11/3",
+        "end": "13/3",
+        "status": "done"
+      },
+      {
+        "id": "3.3",
+        "task": "Quay Main Film (location VAS campus)",
+        "pic": "Joint",
+        "start": "14/3",
+        "end": "16/3",
+        "status": "done"
+      },
+      {
+        "id": "3.4",
+        "task": "Edit + color grade + sound mix",
+        "pic": "PMAX",
+        "start": "17/3",
+        "end": "26/3",
+        "status": "done"
+      },
+      {
+        "id": "3.5",
+        "task": "Airing Main Film (FB/YT/Zalo OA)",
+        "pic": "Joint",
+        "start": "28/3",
+        "end": "8/4",
+        "status": "inprog"
+      },
+      {
+        "g": "III. AMPLIFYING — Cutdown 30s"
+      },
+      {
+        "id": "4.1",
+        "task": "Brief concept cutdown 30s tu Main Film",
+        "pic": "Joint",
+        "start": "28/3",
+        "end": "29/3",
+        "status": "done"
+      },
+      {
+        "id": "4.2",
+        "task": "Script cutdown 30s v1",
+        "pic": "PMAX",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "done"
+      },
+      {
+        "id": "4.3",
+        "task": "VAS review script cutdown",
+        "pic": "VAS",
+        "start": "1/4",
+        "end": "2/4",
+        "status": "inprog"
+      },
+      {
+        "id": "4.4",
+        "task": "Revise script v2",
+        "pic": "PMAX",
+        "start": "3/4",
+        "end": "4/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.5",
+        "task": "VAS approve script final",
+        "pic": "VAS",
+        "start": "5/4",
+        "end": "5/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.6",
+        "task": "Edit cutdown tu footage Main Film",
+        "pic": "PMAX",
+        "start": "6/4",
+        "end": "9/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.7",
+        "task": "VAS review cut v1",
+        "pic": "VAS",
+        "start": "10/4",
+        "end": "11/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.8",
+        "task": "Revise cut",
+        "pic": "PMAX",
+        "start": "12/4",
+        "end": "13/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.9",
+        "task": "VAS final approve",
+        "pic": "VAS",
+        "start": "14/4",
+        "end": "14/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.10",
+        "task": "Export + deliver file final",
+        "pic": "PMAX",
+        "start": "15/4",
+        "end": "15/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "4.11",
+        "task": "Airing Cutdown 30s (paid + organic)",
+        "pic": "Joint",
+        "start": "16/4",
+        "end": "30/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "III. AMPLIFYING — Interview Video 'Ba me nghi gi'"
+      },
+      {
+        "id": "5.1",
+        "task": "Concept + format interview video",
+        "pic": "Joint",
+        "start": "1/4",
+        "end": "2/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.2",
+        "task": "Brief casting (3 cap phu huynh + hoc sinh)",
+        "pic": "PMAX",
+        "start": "2/4",
+        "end": "3/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.3",
+        "task": "VAS confirm casting list",
+        "pic": "VAS",
+        "start": "4/4",
+        "end": "5/4",
+        "status": "inprog"
+      },
+      {
+        "id": "5.4",
+        "task": "Viet cau hoi phong van cho tung nhom",
+        "pic": "PMAX",
+        "start": "5/4",
+        "end": "7/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.5",
+        "task": "VAS review cau hoi phong van",
+        "pic": "VAS",
+        "start": "8/4",
+        "end": "9/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.6",
+        "task": "Schedule ngay quay phu huynh nhom 1",
+        "pic": "VAS",
+        "start": "10/4",
+        "end": "11/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.7",
+        "task": "Quay interview nhom 1",
+        "pic": "Joint",
+        "start": "14/4",
+        "end": "14/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.8",
+        "task": "Schedule ngay quay phu huynh nhom 2",
+        "pic": "VAS",
+        "start": "14/4",
+        "end": "15/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.9",
+        "task": "Quay interview nhom 2",
+        "pic": "Joint",
+        "start": "17/4",
+        "end": "17/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.10",
+        "task": "Quay interview nhom 3",
+        "pic": "Joint",
+        "start": "19/4",
+        "end": "19/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.11",
+        "task": "Dung rough cut ca 3 nhom",
+        "pic": "PMAX",
+        "start": "20/4",
+        "end": "25/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.12",
+        "task": "VAS review rough cut",
+        "pic": "VAS",
+        "start": "26/4",
+        "end": "28/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.13",
+        "task": "Revise + fine cut",
+        "pic": "PMAX",
+        "start": "29/4",
+        "end": "2/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.14",
+        "task": "VAS final approve",
+        "pic": "VAS",
+        "start": "3/5",
+        "end": "4/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.15",
+        "task": "Export + deliver files (3 versions)",
+        "pic": "PMAX",
+        "start": "4/5",
+        "end": "4/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "5.16",
+        "task": "Airing Interview Videos",
+        "pic": "Joint",
+        "start": "5/5",
+        "end": "5/5",
+        "status": "upcoming"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "color": "#f97316",
+    "name": "AWO for Performance",
+    "shortName": "AWO Perf",
+    "status": "on-track",
+    "ownerPmax": "Full production & optimization",
+    "ownerVas": "Brief, USP & approval",
+    "desc": "San xuat AWO (Animated Web Optimization) cho performance ads. Muc tieu: convert va mo pheu tuyen sinh cho VAS tren cac kenh paid.",
+    "currentProgress": "Brief & angle strategy dang in-progress. PMAX chuan bi concept lock.",
+    "nextStep": "Deliver concept + angle strategy cho VAS review",
+    "nextStepPic": "PMAX",
+    "ganttStart": 0,
+    "ganttEnd": 12,
+    "weeklyFocus": {
+      "cycleStage": "Plan",
+      "cycleIndex": 0,
+      "focusPmax": [
+        "Finalize brief & angle strategy AWO",
+        "Concept lock - 3-5 angles khac nhau",
+        "Chuan bi asset list can bi tu VAS (logo, product image, v.v.)"
+      ],
+      "focusVas": [
+        "Confirm USP chinh va key message cho tung kenh",
+        "Provide brand asset: logo file, color guide, font",
+        "Confirm muc tieu conversion va CTA chinh"
+      ]
+    },
+    "phases": [
+      {
+        "name": "Concept lock",
+        "week": 1
+      },
+      {
+        "name": "Set 1 deliver",
+        "week": 3
+      },
+      {
+        "name": "Set 2 deliver",
+        "week": 6
+      },
+      {
+        "name": "Optimization",
+        "week": 10
+      }
+    ],
+    "steps": [
+      {
+        "g": "BRIEF & CONCEPT"
+      },
+      {
+        "id": "1.1",
+        "task": "Brief & angle strategy AWO",
+        "pic": "Joint",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "inprog"
+      },
+      {
+        "id": "1.2",
+        "task": "VAS confirm USP + key message",
+        "pic": "VAS",
+        "start": "30/3",
+        "end": "2/4",
+        "status": "inprog"
+      },
+      {
+        "id": "1.3",
+        "task": "PMAX develop 3-5 angle concepts",
+        "pic": "PMAX",
+        "start": "1/4",
+        "end": "4/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.4",
+        "task": "VAS review & chon angle",
+        "pic": "VAS",
+        "start": "5/4",
+        "end": "6/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.5",
+        "task": "Concept lock + VAS approve",
+        "pic": "Joint",
+        "start": "7/4",
+        "end": "7/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "SET 1 - PRODUCTION"
+      },
+      {
+        "id": "2.1",
+        "task": "Produce AWO set 1 (3 angles x 3 formats)",
+        "pic": "PMAX",
+        "start": "8/4",
+        "end": "15/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.2",
+        "task": "VAS review set 1",
+        "pic": "VAS",
+        "start": "16/4",
+        "end": "17/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.3",
+        "task": "Revise theo feedback",
+        "pic": "PMAX",
+        "start": "18/4",
+        "end": "19/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.4",
+        "task": "Final approve + deploy set 1",
+        "pic": "Joint",
+        "start": "20/4",
+        "end": "21/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "SET 2 - OPTIMIZATION"
+      },
+      {
+        "id": "3.1",
+        "task": "Analyze performance set 1 (2 tuan)",
+        "pic": "PMAX",
+        "start": "22/4",
+        "end": "5/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.2",
+        "task": "Brief set 2 dua tren performance insight",
+        "pic": "Joint",
+        "start": "6/5",
+        "end": "7/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.3",
+        "task": "Produce AWO set 2 (winning angles iterate)",
+        "pic": "PMAX",
+        "start": "8/5",
+        "end": "16/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.4",
+        "task": "VAS approve set 2",
+        "pic": "VAS",
+        "start": "17/5",
+        "end": "18/5",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.5",
+        "task": "Deploy set 2 + monitor",
+        "pic": "Joint",
+        "start": "19/5",
+        "end": "19/5",
+        "status": "upcoming"
+      },
+      {
+        "g": "ONGOING OPTIMIZATION"
+      },
+      {
+        "id": "4.1",
+        "task": "Monthly performance review & iterate",
+        "pic": "PMAX",
+        "start": "1/6",
+        "end": "30/9",
+        "status": "upcoming"
+      }
+    ]
+  }
+]
