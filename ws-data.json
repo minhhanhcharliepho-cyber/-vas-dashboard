@@ -405,8 +405,8 @@
     "ownerPmax": "Script, Background & Setup",
     "ownerVas": "Host & Content",
     "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
-    "currentProgress": "Lich live 15/4 da confirm. Script dev R1 dang in-progress (deadline 1/4). Background layout dang revise. Host chua chon - VAS can action gap.",
-    "nextStep": "VAS chon host & confirm (deadline 31/3) + feedback script outline",
+    "currentProgress": "Host đề xuất. Script outline & chốt khách mời.",
+    "nextStep": "Chọn host",
     "nextStepPic": "VAS",
     "ganttStart": 0,
     "ganttEnd": 3,
@@ -414,14 +414,14 @@
       "cycleStage": "Script",
       "cycleIndex": 1,
       "focusPmax": [
-        "Script dev detail R1 - hoan thien truoc 1/4",
-        "Background layout brief + chuan bi revise",
-        "Check background / propose studio layout"
+        "Host đề xuất",
+        "Script outline & chốt khách mời",
+        "Script dev detail R1"
       ],
       "focusVas": [
-        "[URGENT] Chon host va confirm truoc 31/3",
-        "Feedback script outline (da in-progress tu 25/3)",
-        "Confirm studio va background concept"
+        "Chọn host",
+        "Book lịch host & brief thông tin dự án",
+        "Anh Trác QC & chỉnh sửa"
       ]
     },
     "phases": [
@@ -440,56 +440,56 @@
     ],
     "steps": [
       {
-        "g": "A. LIVESTREAM CALENDAR"
+        "g": "A. Livestream calendar"
       },
       {
-        "id": "A.1",
-        "task": "Dieu chinh va thong nhat lich live: 11h30-13h30 ngay 15/4",
+        "id": "1",
+        "task": "Điều chỉnh và thống nhất lịch live:\n11h30 - 13h30 ngày 15/4",
         "pic": "Joint",
         "start": "25/3",
         "end": "27/3",
         "status": "done"
       },
       {
-        "g": "B. HOST & STUDIO"
+        "g": "B. Host & Studio"
       },
       {
-        "id": "B.1",
-        "task": "Host de xuat",
+        "id": "2",
+        "task": "Host đề xuất",
         "pic": "PMAX",
         "start": "25/3",
         "end": "30/3",
         "status": "inprog"
       },
       {
-        "id": "B.2",
-        "task": "Chon host",
+        "id": "3",
+        "task": "Chọn host",
         "pic": "VAS",
         "start": "30/3",
         "end": "31/3",
         "status": "upcoming"
       },
       {
-        "id": "B.3",
-        "task": "Book lich host & brief thong tin du an",
+        "id": "4",
+        "task": "Book lịch host & brief thông tin dự án",
         "pic": "PMAX",
         "start": "31/3",
         "end": "1/4",
         "status": "upcoming"
       },
       {
-        "g": "C. SCRIPT"
+        "g": "C. Script"
       },
       {
-        "id": "C.1",
-        "task": "Script outline & chot khach moi",
+        "id": "5",
+        "task": "Script outline & chốt khách mời",
         "pic": "Joint",
         "start": "25/3",
         "end": "27/3",
         "status": "inprog"
       },
       {
-        "id": "C.2",
+        "id": "6",
         "task": "Script dev detail R1",
         "pic": "PMAX",
         "start": "27/3",
@@ -497,23 +497,23 @@
         "status": "inprog"
       },
       {
-        "id": "C.3",
-        "task": "Anh Trac QC & chinh sua",
+        "id": "7",
+        "task": "Anh Trác QC & chỉnh sửa",
         "pic": "PMAX",
         "start": "1/4",
         "end": "3/4",
         "status": "upcoming"
       },
       {
-        "id": "C.4",
-        "task": "Feedback script R1",
+        "id": "8",
+        "task": "Feedback",
         "pic": "VAS",
         "start": "3/4",
         "end": "5/4",
         "status": "upcoming"
       },
       {
-        "id": "C.5",
+        "id": "9",
         "task": "Script dev detail R2",
         "pic": "PMAX",
         "start": "6/4",
@@ -521,7 +521,7 @@
         "status": "upcoming"
       },
       {
-        "id": "C.6",
+        "id": "10",
         "task": "Feedback & final script",
         "pic": "Joint",
         "start": "11/4",
@@ -529,26 +529,26 @@
         "status": "upcoming"
       },
       {
-        "g": "D. BACKGROUND LIVESTREAM"
+        "g": "D. Background livestream"
       },
       {
-        "id": "D.1",
-        "task": "Background layout brief (Tittle: Buoi 2 - Kien tao moi truong hoc tap toan dien)",
+        "id": "11",
+        "task": "Background layout brief\n- Tittle: Buổi 2: Kiến tạo môi trường học tập toàn diện\n- Tagname khách mời: thêm tag name của cô Thanh Hà, anh Thu, cô Eloise\n(Các elements còn lại như cũ)",
         "pic": "PMAX",
         "start": "26/3",
         "end": "30/3",
         "status": "inprog"
       },
       {
-        "id": "D.2",
-        "task": "Feedback & Dieu chinh + Confirm thong tin tren layout",
+        "id": "12",
+        "task": "Feedback & Điều chỉnh và Confirm thông tin trên layout",
         "pic": "VAS",
         "start": "30/3",
         "end": "31/3",
         "status": "upcoming"
       },
       {
-        "id": "D.3",
+        "id": "13",
         "task": "Background final",
         "pic": "Joint",
         "start": "30/3",
@@ -556,40 +556,40 @@
         "status": "upcoming"
       },
       {
-        "g": "E. CHECK BACKGROUND / STUDIO"
+        "g": "E. Check background / studio"
       },
       {
-        "id": "E.1",
-        "task": "Propose Studio layout",
+        "id": "14",
+        "task": "Propose Studio",
         "pic": "PMAX",
         "start": "27/3",
         "end": "27/3",
         "status": "inprog"
       },
       {
-        "id": "E.2",
-        "task": "Confirm studio",
+        "id": "15",
+        "task": "Confirm",
         "pic": "VAS",
         "start": "27/3",
         "end": "28/3",
         "status": "upcoming"
       },
       {
-        "g": "F. DECOR"
+        "g": "F. Decor"
       },
       {
-        "id": "F.1",
-        "task": "Cac do can muon cua truong (dua theo kich thuoc ke studio)",
+        "id": "16",
+        "task": "Các đồ cần mượn của trường:\n- (dựa theo kích thước kệ studio)",
         "pic": "Joint",
         "start": "8/4",
         "end": "12/4",
         "status": "upcoming"
       },
       {
-        "g": "G. CAPTION LIVESTREAM"
+        "g": "G. Caption livestream"
       },
       {
-        "id": "G.1",
+        "id": "17",
         "task": "Caption Facebook",
         "pic": "Joint",
         "start": "8/4",
@@ -597,100 +597,103 @@
         "status": "upcoming"
       },
       {
-        "g": "H. LIVESTREAM SET UP TAI STUDIO"
+        "g": "H. Livestream set up tại Studio"
       },
       {
-        "id": "H.1",
-        "task": "Final check & set up (Equipment, Background, Leadform, Caption, Seeding, Ads, Host)",
+        "id": "18",
+        "task": "Final check and set up\n- Equipment \n- Background\n- Leadform\n- Caption\n- Seeding\n- Ads \n- Host",
         "pic": "PMAX",
-        "start": "15/4",
-        "end": "15/4",
+        "start": "",
+        "end": "",
         "status": "upcoming"
       },
       {
-        "g": "I. CREATIVE PRODUCTION — Teasing"
+        "g": "I. Creative Production support Livetsream"
       },
       {
-        "id": "I.1.1",
-        "task": "Propose Idea - Teasing content",
+        "g": "1. Teasing"
+      },
+      {
+        "id": "19",
+        "task": "Propose Idea",
         "pic": "PMAX",
-        "start": "3/4",
-        "end": "3/4",
+        "start": "2/4",
+        "end": "2/4",
         "status": "inprog"
       },
       {
-        "id": "I.1.2",
-        "task": "Client Confirm - Teasing",
+        "id": "20",
+        "task": "Client Confirm",
         "pic": "VAS",
-        "start": "4/4",
-        "end": "4/4",
+        "start": "3/4",
+        "end": "3/4",
         "status": "upcoming"
       },
       {
-        "id": "I.1.3",
-        "task": "Production - Teasing",
+        "id": "21",
+        "task": "Production",
         "pic": "PMAX",
-        "start": "6/4",
+        "start": "5/4",
+        "end": "7/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "22",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "8/4",
         "end": "8/4",
         "status": "upcoming"
       },
       {
-        "id": "I.1.4",
-        "task": "Airing - Teasing",
-        "pic": "PMAX",
-        "start": "9/4",
-        "end": "9/4",
-        "status": "upcoming"
+        "g": "2. During"
       },
       {
-        "g": "I. CREATIVE PRODUCTION — During Live"
-      },
-      {
-        "id": "I.2.1",
-        "task": "Production post Livestream => Chot caption",
+        "id": "23",
+        "task": "Production post Livestream => Chốt caption",
         "pic": "PMAX",
         "start": "13/4",
         "end": "14/4",
         "status": "upcoming"
       },
       {
-        "id": "I.2.2",
-        "task": "Airing post-live content",
+        "id": "24",
+        "task": "Airing",
         "pic": "PMAX",
         "start": "15/4",
         "end": "15/4",
         "status": "upcoming"
       },
       {
-        "g": "I. CREATIVE PRODUCTION — Amplify"
+        "g": "3. Amilify"
       },
       {
-        "id": "I.3.1",
-        "task": "Propose Idea - Amplify content",
+        "id": "25",
+        "task": "Propose Idea",
         "pic": "PMAX",
         "start": "16/4",
         "end": "16/4",
         "status": "upcoming"
       },
       {
-        "id": "I.3.2",
-        "task": "Client Confirm - Amplify",
+        "id": "26",
+        "task": "Client Confirm",
         "pic": "VAS",
         "start": "17/4",
         "end": "17/4",
         "status": "upcoming"
       },
       {
-        "id": "I.3.3",
-        "task": "Production - Amplify",
+        "id": "27",
+        "task": "Production",
         "pic": "PMAX",
         "start": "18/4",
         "end": "20/4",
         "status": "upcoming"
       },
       {
-        "id": "I.3.4",
-        "task": "Airing - Amplify",
+        "id": "28",
+        "task": "Airing",
         "pic": "PMAX",
         "start": "21/4",
         "end": "21/4",
@@ -707,8 +710,8 @@
     "ownerPmax": "Creative + Video",
     "ownerVas": "Admission Dept",
     "desc": "Series hero content nhin tu goc do phu huynh VASer: teasing video, main film, cutdown 30s va interview 'Ba me nghi gi'. Workstream trong tam cua campaign Admission T4-T5/2026.",
-    "currentProgress": "Teasing video dang dung (rough cut). Main Film da airing 28/3. Cutdown 30s dang revise script. Interview casting chua confirm.",
-    "nextStep": "Confirm script cutdown 30s + schedule casting interview",
+    "currentProgress": "Execution. Production.",
+    "nextStep": "Confirm",
     "nextStepPic": "VAS",
     "ganttStart": 0,
     "ganttEnd": 8,
@@ -716,14 +719,14 @@
       "cycleStage": "Edit/Dung",
       "cycleIndex": 5,
       "focusPmax": [
-        "Dung Teasing Video VASer (ban rough cut)",
-        "Revise script Cutdown 30s lan 2",
-        "Chuan bi brief casting cho Interview Ba me nghi gi"
+        "Execution",
+        "Production",
+        "Build script"
       ],
       "focusVas": [
-        "Review rough cut Teasing Video",
-        "Confirm script Cutdown 30s",
-        "Confirm danh sach casting cho Interview (deadline 5/4)"
+        "Confirm",
+        "Airing on Parent's Group",
+        "Airing (Sau Tết 3 cái)"
       ]
     },
     "phases": [
@@ -742,418 +745,1097 @@
     ],
     "steps": [
       {
-        "g": "I. TEASING — Video 'Trai nghiem thuc thu cua VASer'"
+        "g": "I.. KV Launching"
+      },
+      {
+        "g": "I.. PREPARATION"
+      },
+      {
+        "id": "1",
+        "task": "Shooting",
+        "pic": "PMAX",
+        "start": "27/10",
+        "end": "29/10",
+        "status": "done"
+      },
+      {
+        "id": "2",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "29/10",
+        "end": "28/11",
+        "status": "done"
+      },
+      {
+        "id": "3",
+        "task": "Master release",
+        "pic": "PMAX",
+        "start": "28/11",
+        "end": "29/11",
+        "status": "done"
+      },
+      {
+        "g": "II.. LAUNCHING"
+      },
+      {
+        "id": "1",
+        "task": "Airing on multi channel",
+        "pic": "PMAX",
+        "start": "22/12",
+        "end": "27/12",
+        "status": "done"
+      },
+      {
+        "g": "III.. AMPLIFING"
+      },
+      {
+        "id": "5",
+        "task": "KV recap \nAlumni multi dream case study (Then & Now recap album series)",
+        "pic": "PMAX",
+        "start": "5/1",
+        "end": "6/1",
+        "status": "done"
+      },
+      {
+        "g": "I.. iTVC Launching"
+      },
+      {
+        "g": "I.. TEASING"
+      },
+      {
+        "g": "1. 6 Video Teasing"
       },
       {
         "id": "1.1",
-        "task": "Brief & script concept cho teasing video",
-        "pic": "Joint",
-        "start": "17/3",
-        "end": "18/3",
+        "task": "Propose Idea",
+        "pic": "PMAX",
+        "start": "6/1",
+        "end": "6/1",
         "status": "done"
       },
       {
         "id": "1.2",
-        "task": "Script draft v1",
+        "task": "Develop teaser scripts",
         "pic": "PMAX",
-        "start": "18/3",
-        "end": "20/3",
+        "start": "7/1",
+        "end": "9/1",
         "status": "done"
       },
       {
         "id": "1.3",
-        "task": "VAS review script v1",
+        "task": "VAS Feedback – Round 1",
         "pic": "VAS",
-        "start": "21/3",
-        "end": "22/3",
+        "start": "9/1",
+        "end": "10/1",
         "status": "done"
       },
       {
         "id": "1.4",
-        "task": "Revise script v2",
+        "task": "Revise – Round 1",
         "pic": "PMAX",
-        "start": "23/3",
-        "end": "24/3",
+        "start": "10/1",
+        "end": "11/1",
         "status": "done"
       },
       {
         "id": "1.5",
-        "task": "VAS approve script final",
+        "task": "VAS Feedback - Round 2",
         "pic": "VAS",
-        "start": "25/3",
+        "start": "11/1",
+        "end": "12/1",
+        "status": "done"
+      },
+      {
+        "id": "1.6",
+        "task": "Revise – Round 2",
+        "pic": "PMAX",
+        "start": "12/1",
+        "end": "13/1",
+        "status": "done"
+      },
+      {
+        "id": "1.7",
+        "task": "Production 2 pack song song",
+        "pic": "PMAX",
+        "start": "13/1",
+        "end": "19/1",
+        "status": "done"
+      },
+      {
+        "id": "1.8",
+        "task": "Feedback",
+        "pic": "VAS",
+        "start": "19/1",
+        "end": "21/1",
+        "status": "done"
+      },
+      {
+        "id": "1.9",
+        "task": "Revise",
+        "pic": "PMAX",
+        "start": "21/1",
+        "end": "23/1",
+        "status": "done"
+      },
+      {
+        "id": "1.10",
+        "task": "Confirm",
+        "pic": "VAS",
+        "start": "23/1",
+        "end": "24/1",
+        "status": "done"
+      },
+      {
+        "id": "1.11",
+        "task": "Master release - Size FB",
+        "pic": "PMAX",
+        "start": "24/1",
+        "end": "25/1",
+        "status": "done"
+      },
+      {
+        "id": "1.12",
+        "task": "Adapt size - IG",
+        "pic": "PMAX",
+        "start": "25/1",
+        "end": "26/1",
+        "status": "done"
+      },
+      {
+        "id": "1.13",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "26/1",
+        "end": "1/2",
+        "status": "done"
+      },
+      {
+        "g": "2. Cover page"
+      },
+      {
+        "id": "2.1",
+        "task": "Propose Idea",
+        "pic": "PMAX",
+        "start": "5/1",
+        "end": "6/1",
+        "status": "done"
+      },
+      {
+        "id": "2.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "6/1",
+        "end": "7/1",
+        "status": "done"
+      },
+      {
+        "id": "2.3",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "7/1",
+        "end": "9/1",
+        "status": "done"
+      },
+      {
+        "id": "2.4",
+        "task": "Feedback & Revise R1",
+        "pic": "Joint",
+        "start": "12/1",
+        "end": "13/1",
+        "status": "done"
+      },
+      {
+        "id": "2.5",
+        "task": "Feedback & Revise R2",
+        "pic": "Joint",
+        "start": "21/1",
+        "end": "22/1",
+        "status": "done"
+      },
+      {
+        "id": "2.6",
+        "task": "Confirm",
+        "pic": "VAS",
+        "start": "23/1",
+        "end": "23/1",
+        "status": "done"
+      },
+      {
+        "id": "2.7",
+        "task": "Adapt size - IG, Zalo and Yotube cover",
+        "pic": "PMAX",
+        "start": "24/1",
+        "end": "25/1",
+        "status": "done"
+      },
+      {
+        "id": "2.8",
+        "task": "Air Cover #1 Teasing",
+        "pic": "PMAX",
+        "start": "23/1",
+        "end": "24/1",
+        "status": "done"
+      },
+      {
+        "id": "2.9",
+        "task": "Air Cover #2 Reveal",
+        "pic": "PMAX",
+        "start": "3/2",
+        "end": "3/2",
+        "status": "done"
+      },
+      {
+        "g": "3. Seeding"
+      },
+      {
+        "id": "3.1",
+        "task": "Propose Idea",
+        "pic": "PMAX",
+        "start": "5/1",
+        "end": "6/1",
+        "status": "done"
+      },
+      {
+        "id": "3.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "6/1",
+        "end": "7/1",
+        "status": "done"
+      },
+      {
+        "id": "3.3",
+        "task": "Execution",
+        "pic": "PMAX",
+        "start": "22/1",
+        "end": "24/1",
+        "status": "inprog"
+      },
+      {
+        "id": "3.4",
+        "task": "Confirm",
+        "pic": "VAS",
+        "start": "24/1",
+        "end": "25/1",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.5",
+        "task": "Airing on Parent's Group",
+        "pic": "PMAX",
+        "start": "26/1",
+        "end": "25/9",
+        "status": "upcoming"
+      },
+      {
+        "g": "II.. LAUNCHING"
+      },
+      {
+        "g": "1. Main iTVC"
+      },
+      {
+        "id": "1.1",
+        "task": "Master release",
+        "pic": "PMAX",
+        "start": "8/1",
+        "end": "8/1",
+        "status": "done"
+      },
+      {
+        "id": "1.2",
+        "task": "Adapt size",
+        "pic": "PMAX",
+        "start": "8/1",
+        "end": "11/1",
+        "status": "done"
+      },
+      {
+        "id": "1.3",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "1/2",
+        "end": "1/2",
+        "status": "done"
+      },
+      {
+        "id": "1.3",
+        "task": "Airing",
+        "pic": "VAS",
+        "start": "1/2",
+        "end": "1/2",
+        "status": "done"
+      },
+      {
+        "id": "1.4",
+        "task": "Airing",
+        "pic": "VAS",
+        "start": "2/2",
+        "end": "2/2",
+        "status": "done"
+      },
+      {
+        "g": "2. Cutdown version"
+      },
+      {
+        "id": "2.1",
+        "task": "Propose idea 6 video cutdown 15s",
+        "pic": "PMAX",
+        "start": "16/1",
+        "end": "16/1",
+        "status": "done"
+      },
+      {
+        "id": "2.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "19/1",
+        "end": "19/1",
+        "status": "done"
+      },
+      {
+        "id": "2.3",
+        "task": "Build 6 script/ board",
+        "pic": "PMAX",
+        "start": "20/1",
+        "end": "22/1",
+        "status": "done"
+      },
+      {
+        "id": "2.4",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "23/1",
+        "end": "23/1",
+        "status": "done"
+      },
+      {
+        "id": "2.5",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "26/1",
+        "end": "29/1",
+        "status": "done"
+      },
+      {
+        "id": "2.6",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "1/2",
+        "end": "1/2",
+        "status": "done"
+      },
+      {
+        "id": "2.7",
+        "task": "Revise",
+        "pic": "PMAX",
+        "start": "2/2",
+        "end": "4/2",
+        "status": "done"
+      },
+      {
+        "id": "2.8",
+        "task": "Confirm + Master release",
+        "pic": "VAS",
+        "start": "5/2",
+        "end": "5/2",
+        "status": "done"
+      },
+      {
+        "id": "2.9",
+        "task": "Adapt size",
+        "pic": "PMAX",
+        "start": "6/2",
+        "end": "6/2",
+        "status": "done"
+      },
+      {
+        "id": "2.10",
+        "task": "Airing (Trước tết 3 cái)",
+        "pic": "PMAX",
+        "start": "7/2",
+        "end": "9/2",
+        "status": "done"
+      },
+      {
+        "id": "2.11",
+        "task": "Airing (Sau Tết 3 cái)",
+        "pic": "PMAX",
+        "start": "25/2",
+        "end": "3/3",
+        "status": "upcoming"
+      },
+      {
+        "g": "3. Video lời cảm ơn - VAS INCHARGE"
+      },
+      {
+        "id": "3.1",
+        "task": "Idea + Script",
+        "pic": "VAS",
+        "start": "26/1",
+        "end": "26/1",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.2",
+        "task": "Production",
+        "pic": "VAS",
+        "start": "26/1",
+        "end": "1/2",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.3",
+        "task": "Airing",
+        "pic": "VAS",
+        "start": "6/3",
+        "end": "6/3",
+        "status": "upcoming"
+      },
+      {
+        "g": "III.. AMPLIFING"
+      },
+      {
+        "g": "1. BTS Video"
+      },
+      {
+        "id": "1.1",
+        "task": "Propose idea 3 video BTS",
+        "pic": "PMAX",
+        "start": "26/1",
+        "end": "26/1",
+        "status": "done"
+      },
+      {
+        "id": "1.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "27/1",
+        "end": "27/1",
+        "status": "done"
+      },
+      {
+        "id": "1.3",
+        "task": "Build 3 script/ board",
+        "pic": "PMAX",
+        "start": "28/1",
+        "end": "29/1",
+        "status": "done"
+      },
+      {
+        "id": "1.4",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "30/1",
+        "end": "30/1",
+        "status": "done"
+      },
+      {
+        "id": "1.5",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "2/2",
+        "end": "4/2",
+        "status": "done"
+      },
+      {
+        "id": "1.6",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "5/2",
+        "end": "5/2",
+        "status": "done"
+      },
+      {
+        "id": "1.7",
+        "task": "Revise",
+        "pic": "PMAX",
+        "start": "6/2",
+        "end": "9/2",
+        "status": "done"
+      },
+      {
+        "id": "1.8",
+        "task": "Confirm",
+        "pic": "VAS",
+        "start": "10/2",
+        "end": "11/2",
+        "status": "done"
+      },
+      {
+        "id": "1.9",
+        "task": "Master release - Size FB",
+        "pic": "PMAX",
+        "start": "12/2",
+        "end": "12/2",
+        "status": "done"
+      },
+      {
+        "id": "1.10",
+        "task": "Adapt size",
+        "pic": "PMAX",
+        "start": "13/2",
+        "end": "13/2",
+        "status": "done"
+      },
+      {
+        "id": "1.11",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "9/3",
+        "end": "11/3",
+        "status": "done"
+      },
+      {
+        "g": "2. Social post"
+      },
+      {
+        "id": "2.1",
+        "task": "Propose idea/ direction",
+        "pic": "PMAX",
+        "start": "",
+        "end": "",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "",
+        "end": "",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.3",
+        "task": "Execution",
+        "pic": "PMAX",
+        "start": "",
+        "end": "",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.4",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "",
+        "end": "",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.5",
+        "task": "Revise",
+        "pic": "PMAX",
+        "start": "",
+        "end": "",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.6",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "23/2",
+        "end": "28/2",
+        "status": "upcoming"
+      },
+      {
+        "g": "III.. PARENT'S POV"
+      },
+      {
+        "g": "I.. TEASING"
+      },
+      {
+        "g": "1.. Video so sánh BTS và thành phẩm cho thấy \"Trải nghiệm thực thụ của VASer\""
+      },
+      {
+        "id": "1.1",
+        "task": "Propose idea",
+        "pic": "PMAX",
+        "start": "12/3",
+        "end": "12/3",
+        "status": "done"
+      },
+      {
+        "id": "1.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "12/3",
+        "end": "12/3",
+        "status": "done"
+      },
+      {
+        "id": "1.3",
+        "task": "Build 1 script/ board",
+        "pic": "PMAX",
+        "start": "18/3",
+        "end": "19/3",
+        "status": "done"
+      },
+      {
+        "id": "1.4",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "20/3",
+        "end": "20/3",
+        "status": "done"
+      },
+      {
+        "id": "1.5",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "23/3",
         "end": "25/3",
         "status": "done"
       },
       {
         "id": "1.6",
-        "task": "Shoot teasing video tai truong VAS",
-        "pic": "Joint",
-        "start": "26/3",
-        "end": "27/3",
-        "status": "inprog"
-      },
-      {
-        "id": "1.7",
-        "task": "Edit / Dung rough cut",
-        "pic": "PMAX",
-        "start": "28/3",
-        "end": "3/4",
-        "status": "inprog"
-      },
-      {
-        "id": "1.8",
-        "task": "VAS review rough cut",
-        "pic": "VAS",
-        "start": "4/4",
-        "end": "6/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "1.9",
-        "task": "Revise theo feedback",
-        "pic": "PMAX",
-        "start": "7/4",
-        "end": "9/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "1.10",
-        "task": "VAS final approve",
-        "pic": "VAS",
-        "start": "10/4",
-        "end": "10/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "1.11",
-        "task": "Airing Teasing Video",
-        "pic": "Joint",
-        "start": "11/4",
-        "end": "11/4",
-        "status": "upcoming"
-      },
-      {
-        "g": "I. TEASING — Social Post"
-      },
-      {
-        "id": "2.1",
-        "task": "Brief noi dung social teasing",
-        "pic": "Joint",
-        "start": "20/3",
-        "end": "21/3",
-        "status": "done"
-      },
-      {
-        "id": "2.2",
-        "task": "Design 5 social posts teasing",
-        "pic": "PMAX",
-        "start": "22/3",
-        "end": "25/3",
-        "status": "done"
-      },
-      {
-        "id": "2.3",
-        "task": "VAS review posts teasing",
+        "task": "VAS Feedback",
         "pic": "VAS",
         "start": "26/3",
-        "end": "27/3",
-        "status": "inprog"
-      },
-      {
-        "id": "2.4",
-        "task": "Chinh sua theo feedback",
-        "pic": "PMAX",
-        "start": "28/3",
-        "end": "29/3",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.5",
-        "task": "VAS final approve social posts",
-        "pic": "VAS",
-        "start": "30/3",
-        "end": "30/3",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.6",
-        "task": "Len lich dang teasing posts",
-        "pic": "PMAX",
-        "start": "31/3",
-        "end": "31/3",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.7",
-        "task": "Airing social posts teasing",
-        "pic": "Joint",
-        "start": "1/4",
-        "end": "10/4",
-        "status": "upcoming"
-      },
-      {
-        "g": "II. LAUNCHING — Main Film"
-      },
-      {
-        "id": "3.1",
-        "task": "Script & storyboard Main Film",
-        "pic": "PMAX",
-        "start": "1/3",
-        "end": "10/3",
-        "status": "done"
-      },
-      {
-        "id": "3.2",
-        "task": "VAS approve script Main Film",
-        "pic": "VAS",
-        "start": "11/3",
-        "end": "13/3",
-        "status": "done"
-      },
-      {
-        "id": "3.3",
-        "task": "Quay Main Film (location VAS campus)",
-        "pic": "Joint",
-        "start": "14/3",
-        "end": "16/3",
-        "status": "done"
-      },
-      {
-        "id": "3.4",
-        "task": "Edit + color grade + sound mix",
-        "pic": "PMAX",
-        "start": "17/3",
         "end": "26/3",
         "status": "done"
       },
       {
-        "id": "3.5",
-        "task": "Airing Main Film (FB/YT/Zalo OA)",
-        "pic": "Joint",
-        "start": "28/3",
-        "end": "8/4",
-        "status": "inprog"
-      },
-      {
-        "g": "III. AMPLIFYING — Cutdown 30s"
-      },
-      {
-        "id": "4.1",
-        "task": "Brief concept cutdown 30s tu Main Film",
-        "pic": "Joint",
-        "start": "28/3",
-        "end": "29/3",
+        "id": "1.7",
+        "task": "Revise",
+        "pic": "PMAX",
+        "start": "27/3",
+        "end": "30/3",
         "status": "done"
       },
       {
-        "id": "4.2",
-        "task": "Script cutdown 30s v1",
-        "pic": "PMAX",
-        "start": "30/3",
+        "id": "1.8",
+        "task": "Confirm",
+        "pic": "VAS",
+        "start": "31/3",
         "end": "31/3",
         "status": "done"
       },
       {
-        "id": "4.3",
-        "task": "VAS review script cutdown",
-        "pic": "VAS",
+        "id": "1.9",
+        "task": "Master release",
+        "pic": "PMAX",
         "start": "1/4",
+        "end": "1/4",
+        "status": "done"
+      },
+      {
+        "id": "1.10",
+        "task": "Adapt size",
+        "pic": "PMAX",
+        "start": "2/4",
         "end": "2/4",
+        "status": "done"
+      },
+      {
+        "id": "1.11",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "1/4",
+        "end": "1/4",
+        "status": "done"
+      },
+      {
+        "g": "2.. Social post teasing"
+      },
+      {
+        "id": "2.1",
+        "task": "Propose idea social post teasing",
+        "pic": "PMAX",
+        "start": "12/3",
+        "end": "12/3",
+        "status": "done"
+      },
+      {
+        "id": "2.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "13/3",
+        "end": "13/3",
+        "status": "done"
+      },
+      {
+        "id": "2.3",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "30/3",
+        "end": "31/3",
         "status": "inprog"
       },
       {
-        "id": "4.4",
-        "task": "Revise script v2",
-        "pic": "PMAX",
-        "start": "3/4",
-        "end": "4/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "4.5",
-        "task": "VAS approve script final",
+        "id": "2.4",
+        "task": "VAS feedback",
         "pic": "VAS",
-        "start": "5/4",
-        "end": "5/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "4.6",
-        "task": "Edit cutdown tu footage Main Film",
-        "pic": "PMAX",
-        "start": "6/4",
-        "end": "9/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "4.7",
-        "task": "VAS review cut v1",
-        "pic": "VAS",
-        "start": "10/4",
-        "end": "11/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "4.8",
-        "task": "Revise cut",
-        "pic": "PMAX",
-        "start": "12/4",
-        "end": "13/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "4.9",
-        "task": "VAS final approve",
-        "pic": "VAS",
-        "start": "14/4",
-        "end": "14/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "4.10",
-        "task": "Export + deliver file final",
-        "pic": "PMAX",
-        "start": "15/4",
-        "end": "15/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "4.11",
-        "task": "Airing Cutdown 30s (paid + organic)",
-        "pic": "Joint",
-        "start": "16/4",
-        "end": "30/4",
-        "status": "upcoming"
-      },
-      {
-        "g": "III. AMPLIFYING — Interview Video 'Ba me nghi gi'"
-      },
-      {
-        "id": "5.1",
-        "task": "Concept + format interview video",
-        "pic": "Joint",
         "start": "1/4",
-        "end": "2/4",
+        "end": "1/4",
         "status": "upcoming"
       },
       {
-        "id": "5.2",
-        "task": "Brief casting (3 cap phu huynh + hoc sinh)",
+        "id": "2.5",
+        "task": "Revise",
         "pic": "PMAX",
         "start": "2/4",
         "end": "3/4",
         "status": "upcoming"
       },
       {
-        "id": "5.3",
-        "task": "VAS confirm casting list",
+        "id": "2.6",
+        "task": "Confirm Social Post",
         "pic": "VAS",
         "start": "4/4",
-        "end": "5/4",
-        "status": "inprog"
+        "end": "4/4",
+        "status": "upcoming"
       },
       {
-        "id": "5.4",
-        "task": "Viet cau hoi phong van cho tung nhom",
+        "id": "2.7",
+        "task": "Airing",
         "pic": "PMAX",
-        "start": "5/4",
+        "start": "4/4",
+        "end": "4/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "II.. Launching"
+      },
+      {
+        "g": "1.. Main Film"
+      },
+      {
+        "id": "1.1",
+        "task": "Master release",
+        "pic": "PMAX",
+        "start": "9/1",
+        "end": "9/1",
+        "status": "done"
+      },
+      {
+        "id": "1.2",
+        "task": "Adapt size",
+        "pic": "PMAX",
+        "start": "12/1",
+        "end": "14/1",
+        "status": "done"
+      },
+      {
+        "id": "1.3",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "done"
+      },
+      {
+        "id": "90",
+        "task": "Airing",
+        "pic": "VAS",
+        "start": "",
+        "end": "",
+        "status": "done"
+      },
+      {
+        "id": "91",
+        "task": "Airing",
+        "pic": "VAS",
+        "start": "8/4",
+        "end": "8/4",
+        "status": "done"
+      },
+      {
+        "g": "II.. AMPLIFING"
+      },
+      {
+        "g": "1.. Cutdown version"
+      },
+      {
+        "id": "1.1",
+        "task": "Propose idea 2 video cutdown 30s ( PFM + Branding)",
+        "pic": "PMAX",
+        "start": "12/3",
+        "end": "12/3",
+        "status": "done"
+      },
+      {
+        "id": "1.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "13/3",
+        "end": "13/3",
+        "status": "done"
+      },
+      {
+        "id": "1.3",
+        "task": "Build 2 script/ board",
+        "pic": "PMAX",
+        "start": "30/3",
+        "end": "31/3",
+        "status": "done"
+      },
+      {
+        "id": "1.4",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "1/4",
+        "end": "1/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.5",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "4/4",
+        "end": "6/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.6",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "7/4",
         "end": "7/4",
         "status": "upcoming"
       },
       {
-        "id": "5.5",
-        "task": "VAS review cau hoi phong van",
-        "pic": "VAS",
+        "id": "1.7",
+        "task": "Revise",
+        "pic": "PMAX",
         "start": "8/4",
-        "end": "9/4",
+        "end": "10/4",
         "status": "upcoming"
       },
       {
-        "id": "5.6",
-        "task": "Schedule ngay quay phu huynh nhom 1",
+        "id": "1.8",
+        "task": "Confirm",
         "pic": "VAS",
-        "start": "10/4",
+        "start": "11/4",
         "end": "11/4",
         "status": "upcoming"
       },
       {
-        "id": "5.7",
-        "task": "Quay interview nhom 1",
-        "pic": "Joint",
-        "start": "14/4",
-        "end": "14/4",
+        "id": "1.9",
+        "task": "Master release",
+        "pic": "PMAX",
+        "start": "12/4",
+        "end": "12/4",
         "status": "upcoming"
       },
       {
-        "id": "5.8",
-        "task": "Schedule ngay quay phu huynh nhom 2",
+        "id": "1.10",
+        "task": "Adapt size",
+        "pic": "PMAX",
+        "start": "13/4",
+        "end": "13/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "1.11",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "15/4",
+        "end": "21/4",
+        "status": "upcoming"
+      },
+      {
+        "g": "2. Short video Interview parents: “Ba mẹ nghĩ gì khi con có nhiều ước mơ\""
+      },
+      {
+        "id": "2.1",
+        "task": "Propose idea 1 video interview",
+        "pic": "PMAX",
+        "start": "12/3",
+        "end": "12/3",
+        "status": "done"
+      },
+      {
+        "id": "2.2",
+        "task": "VAS Feedback",
         "pic": "VAS",
-        "start": "14/4",
-        "end": "15/4",
+        "start": "13/3",
+        "end": "13/3",
+        "status": "done"
+      },
+      {
+        "g": "Direction cho 3 gia đình celeb"
+      },
+      {
+        "id": "2.3",
+        "task": "Build script",
+        "pic": "PMAX",
+        "start": "23/3",
+        "end": "27/3",
+        "status": "inprog"
+      },
+      {
+        "id": "2.4",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "30/3",
+        "end": "31/3",
         "status": "upcoming"
       },
       {
-        "id": "5.9",
-        "task": "Quay interview nhom 2",
-        "pic": "Joint",
+        "id": "2.5",
+        "task": "Revise",
+        "pic": "PMAX",
+        "start": "1/4",
+        "end": "3/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.6",
+        "task": "VAS Confirm",
+        "pic": "VAS",
+        "start": "6/4",
+        "end": "6/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.7",
+        "task": "Production - Preshooting",
+        "pic": "PMAX",
+        "start": "7/4",
+        "end": "8/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.8",
+        "task": "Shooting - est",
+        "pic": "PMAX",
+        "start": "9/4",
+        "end": "10/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.9",
+        "task": "Offline",
+        "pic": "PMAX",
+        "start": "13/4",
+        "end": "16/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.10",
+        "task": "VAS Feedback",
+        "pic": "VAS",
         "start": "17/4",
         "end": "17/4",
         "status": "upcoming"
       },
       {
-        "id": "5.10",
-        "task": "Quay interview nhom 3",
-        "pic": "Joint",
-        "start": "19/4",
-        "end": "19/4",
-        "status": "upcoming"
-      },
-      {
-        "id": "5.11",
-        "task": "Dung rough cut ca 3 nhom",
+        "id": "2.11",
+        "task": "Revise",
         "pic": "PMAX",
         "start": "20/4",
-        "end": "25/4",
+        "end": "21/4",
         "status": "upcoming"
       },
       {
-        "id": "5.12",
-        "task": "VAS review rough cut",
+        "id": "2.12",
+        "task": "Online",
+        "pic": "PMAX",
+        "start": "22/4",
+        "end": "24/4",
+        "status": "upcoming"
+      },
+      {
+        "id": "2.13",
+        "task": "VAS Feedback",
         "pic": "VAS",
-        "start": "26/4",
+        "start": "28/4",
         "end": "28/4",
         "status": "upcoming"
       },
       {
-        "id": "5.13",
-        "task": "Revise + fine cut",
+        "id": "2.14",
+        "task": "Revise",
         "pic": "PMAX",
         "start": "29/4",
-        "end": "2/5",
+        "end": "29/4",
         "status": "upcoming"
       },
       {
-        "id": "5.14",
-        "task": "VAS final approve",
+        "id": "2.15",
+        "task": "Confirm - Master release",
         "pic": "VAS",
-        "start": "3/5",
-        "end": "4/5",
+        "start": "29/4",
+        "end": "29/4",
         "status": "upcoming"
       },
       {
-        "id": "5.15",
-        "task": "Export + deliver files (3 versions)",
+        "id": "2.16",
+        "task": "Airing",
         "pic": "PMAX",
         "start": "4/5",
         "end": "4/5",
         "status": "upcoming"
       },
       {
-        "id": "5.16",
-        "task": "Airing Interview Videos",
-        "pic": "Joint",
-        "start": "5/5",
-        "end": "5/5",
+        "id": "3.2",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "#REF!",
+        "end": "",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.3",
+        "task": "Build 2 script/ board",
+        "pic": "PMAX",
+        "start": "31/12",
+        "end": "4/1",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.4",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "5/1",
+        "end": "5/1",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.5",
+        "task": "Production",
+        "pic": "PMAX",
+        "start": "6/1",
+        "end": "19/1",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.6",
+        "task": "VAS Feedback",
+        "pic": "VAS",
+        "start": "20/1",
+        "end": "20/1",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.7",
+        "task": "Revise",
+        "pic": "PMAX",
+        "start": "21/1",
+        "end": "3/2",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.8",
+        "task": "Confirm",
+        "pic": "VAS",
+        "start": "4/2",
+        "end": "4/2",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.9",
+        "task": "Adapt size",
+        "pic": "PMAX",
+        "start": "5/2",
+        "end": "5/2",
+        "status": "upcoming"
+      },
+      {
+        "id": "3.10",
+        "task": "Airing",
+        "pic": "PMAX",
+        "start": "5/2",
+        "end": "5/2",
         "status": "upcoming"
       }
     ]
