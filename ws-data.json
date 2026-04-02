@@ -405,7 +405,7 @@
     "ownerPmax": "Script, Background & Setup",
     "ownerVas": "Host & Content",
     "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
-    "currentProgress": "Host đề xuất. Script outline & chốt khách mời.",
+    "currentProgress": "Host đề xuất. Script dev detail R1.",
     "nextStep": "Chọn host",
     "nextStepPic": "VAS",
     "ganttStart": 0,
@@ -415,7 +415,6 @@
       "cycleIndex": 1,
       "focusPmax": [
         "Host đề xuất",
-        "Script outline & chốt khách mời",
         "Script dev detail R1"
       ],
       "focusVas": [
@@ -486,7 +485,7 @@
         "pic": "Joint",
         "start": "25/3",
         "end": "27/3",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "6",
@@ -537,7 +536,7 @@
         "pic": "PMAX",
         "start": "26/3",
         "end": "30/3",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "12",
@@ -564,7 +563,7 @@
         "pic": "PMAX",
         "start": "27/3",
         "end": "27/3",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "15",
@@ -572,7 +571,7 @@
         "pic": "VAS",
         "start": "27/3",
         "end": "28/3",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "F. Decor"
@@ -619,7 +618,7 @@
         "pic": "PMAX",
         "start": "2/4",
         "end": "2/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "20",
