@@ -1163,33 +1163,6 @@
         "status": "upcoming"
       },
       {
-        "g": "3. Video lời cảm ơn - VAS INCHARGE"
-      },
-      {
-        "id": "3.1",
-        "task": "Idea + Script",
-        "pic": "VAS",
-        "start": "26/1",
-        "end": "26/1",
-        "status": "upcoming"
-      },
-      {
-        "id": "3.2",
-        "task": "Production",
-        "pic": "VAS",
-        "start": "26/1",
-        "end": "1/2",
-        "status": "upcoming"
-      },
-      {
-        "id": "3.3",
-        "task": "Airing",
-        "pic": "VAS",
-        "start": "6/3",
-        "end": "6/3",
-        "status": "upcoming"
-      },
-      {
         "g": "III.. AMPLIFING"
       },
       {
@@ -1282,57 +1255,6 @@
         "start": "9/3",
         "end": "11/3",
         "status": "done"
-      },
-      {
-        "g": "2. Social post"
-      },
-      {
-        "id": "2.1",
-        "task": "Propose idea/ direction",
-        "pic": "PMAX",
-        "start": "",
-        "end": "",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.2",
-        "task": "VAS Feedback",
-        "pic": "VAS",
-        "start": "",
-        "end": "",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.3",
-        "task": "Execution",
-        "pic": "PMAX",
-        "start": "",
-        "end": "",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.4",
-        "task": "VAS Feedback",
-        "pic": "VAS",
-        "start": "",
-        "end": "",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.5",
-        "task": "Revise",
-        "pic": "PMAX",
-        "start": "",
-        "end": "",
-        "status": "upcoming"
-      },
-      {
-        "id": "2.6",
-        "task": "Airing",
-        "pic": "PMAX",
-        "start": "23/2",
-        "end": "28/2",
-        "status": "upcoming"
       },
       {
         "g": "III.. PARENT'S POV"
@@ -1521,7 +1443,7 @@
         "status": "done"
       },
       {
-        "id": "90",
+        "id": "81",
         "task": "Airing",
         "pic": "VAS",
         "start": "",
@@ -1529,7 +1451,7 @@
         "status": "done"
       },
       {
-        "id": "91",
+        "id": "82",
         "task": "Airing",
         "pic": "VAS",
         "start": "8/4",
