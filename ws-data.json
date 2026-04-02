@@ -405,22 +405,21 @@
     "ownerPmax": "Script, Background & Setup",
     "ownerVas": "Host & Content",
     "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
-    "currentProgress": "Host đề xuất. Script dev detail R1.",
-    "nextStep": "Chọn host",
-    "nextStepPic": "VAS",
+    "currentProgress": "Script dev detail R1.",
+    "nextStep": "Anh Trác QC & chỉnh sửa",
+    "nextStepPic": "PMAX",
     "ganttStart": 0,
     "ganttEnd": 3,
     "weeklyFocus": {
       "cycleStage": "Script",
       "cycleIndex": 1,
       "focusPmax": [
-        "Host đề xuất",
         "Script dev detail R1"
       ],
       "focusVas": [
-        "Chọn host",
-        "Book lịch host & brief thông tin dự án",
-        "Anh Trác QC & chỉnh sửa"
+        "Anh Trác QC & chỉnh sửa",
+        "Feedback",
+        "Script dev detail R2"
       ]
     },
     "phases": [
@@ -458,7 +457,7 @@
         "pic": "PMAX",
         "start": "25/3",
         "end": "30/3",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "3",
@@ -466,7 +465,7 @@
         "pic": "VAS",
         "start": "30/3",
         "end": "31/3",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "4",
@@ -474,7 +473,7 @@
         "pic": "PMAX",
         "start": "31/3",
         "end": "1/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "C. Script"
