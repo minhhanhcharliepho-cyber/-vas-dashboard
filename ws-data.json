@@ -401,25 +401,23 @@
     "color": "#10b981",
     "name": "Livestream Production",
     "shortName": "Livestream",
-    "status": "on-track",
+    "status": "at-risk",
     "ownerPmax": "Script, Background & Setup",
     "ownerVas": "Host & Content",
     "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
-    "currentProgress": "Script dev detail R1.",
-    "nextStep": "Anh Trác QC & chỉnh sửa",
-    "nextStepPic": "PMAX",
+    "currentProgress": "No tasks in progress.",
+    "nextStep": "Feedback",
+    "nextStepPic": "VAS",
     "ganttStart": 0,
     "ganttEnd": 3,
     "weeklyFocus": {
       "cycleStage": "Script",
       "cycleIndex": 1,
-      "focusPmax": [
-        "Script dev detail R1"
-      ],
+      "focusPmax": [],
       "focusVas": [
-        "Anh Trác QC & chỉnh sửa",
         "Feedback",
-        "Script dev detail R2"
+        "Script dev detail R2",
+        "Feedback & final script"
       ]
     },
     "phases": [
@@ -492,7 +490,7 @@
         "pic": "PMAX",
         "start": "27/3",
         "end": "1/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "7",
@@ -500,7 +498,7 @@
         "pic": "PMAX",
         "start": "1/4",
         "end": "3/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "8",
