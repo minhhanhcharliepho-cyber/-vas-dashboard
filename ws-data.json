@@ -806,11 +806,11 @@
     "color": "#10b981",
     "name": "Livestream Production",
     "shortName": "Livestream",
-    "status": "at-risk",
+    "status": "on-track",
     "ownerPmax": "Script, Background & Setup",
     "ownerVas": "Host & Content",
     "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
-    "currentProgress": "No tasks in progress.",
+    "currentProgress": "Các đồ cần mượn của trường:\n- (dựa theo kích thước kệ studio). Caption Facebook.",
     "nextStep": "Feedback",
     "nextStepPic": "VAS",
     "ganttStart": 0,
@@ -818,7 +818,11 @@
     "weeklyFocus": {
       "cycleStage": "Script",
       "cycleIndex": 1,
-      "focusPmax": [],
+      "focusPmax": [
+        "Các đồ cần mượn của trường:\n- (dựa theo kích thước kệ studio)",
+        "Caption Facebook",
+        "Production"
+      ],
       "focusVas": [
         "Feedback",
         "Script dev detail R2",
@@ -944,16 +948,16 @@
         "id": "12",
         "task": "Feedback & Điều chỉnh và Confirm thông tin trên layout",
         "pic": "VAS",
-        "start": "30/3",
-        "end": "31/3",
+        "start": "6/4",
+        "end": "7/4",
         "status": "upcoming"
       },
       {
         "id": "13",
         "task": "Background final",
         "pic": "Joint",
-        "start": "30/3",
-        "end": "2/4",
+        "start": "10/4",
+        "end": "13/4",
         "status": "upcoming"
       },
       {
@@ -984,7 +988,7 @@
         "pic": "Joint",
         "start": "8/4",
         "end": "12/4",
-        "status": "upcoming"
+        "status": "inprog"
       },
       {
         "g": "G. Caption livestream"
@@ -995,7 +999,7 @@
         "pic": "Joint",
         "start": "8/4",
         "end": "14/4",
-        "status": "upcoming"
+        "status": "inprog"
       },
       {
         "g": "H. Livestream set up tại Studio"
@@ -1028,22 +1032,22 @@
         "pic": "VAS",
         "start": "3/4",
         "end": "3/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "21",
         "task": "Production",
         "pic": "PMAX",
-        "start": "5/4",
-        "end": "7/4",
-        "status": "upcoming"
+        "start": "6/4",
+        "end": "8/4",
+        "status": "inprog"
       },
       {
         "id": "22",
         "task": "Airing",
         "pic": "PMAX",
-        "start": "8/4",
-        "end": "8/4",
+        "start": "9/4",
+        "end": "9/4",
         "status": "upcoming"
       },
       {
@@ -1055,7 +1059,7 @@
         "pic": "PMAX",
         "start": "13/4",
         "end": "14/4",
-        "status": "upcoming"
+        "status": "inprog"
       },
       {
         "id": "24",
