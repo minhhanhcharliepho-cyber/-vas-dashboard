@@ -1799,16 +1799,16 @@
         "id": "2.5",
         "task": "Revise",
         "pic": "PMAX",
-        "start": "2/4",
-        "end": "3/4",
+        "start": "6/4",
+        "end": "7/4",
         "status": "inprog"
       },
       {
         "id": "2.6",
         "task": "Confirm Social Post",
         "pic": "VAS",
-        "start": "4/4",
-        "end": "4/4",
+        "start": "8/4",
+        "end": "8/4",
         "status": "upcoming"
       },
       {
