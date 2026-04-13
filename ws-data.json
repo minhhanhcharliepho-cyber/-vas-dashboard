@@ -206,7 +206,7 @@
     "ownerPmax": "Script, Edit & Production",
     "ownerVas": "Footage, Feedback & Publishing",
     "desc": "12 video sale focus chia 2 pack: Pack Utilize (dùng footage KB có sẵn, 12 video) + Pack New (quay mới 6 video). Air plan cách 2 ngày/video từ 6/4 đến 27/5.",
-    "currentProgress": "Submit. Video Utilize 1.",
+    "currentProgress": "Submit. Utilize KB 2 & 3.",
     "nextStep": "Feedback",
     "nextStepPic": "VAS",
     "ganttStart": 4,
@@ -216,8 +216,8 @@
       "cycleIndex": 1,
       "focusPmax": [
         "Submit",
-        "Video Utilize 1",
-        "Video Utilize 2"
+        "Utilize KB 2 & 3",
+        "Submit"
       ],
       "focusVas": [
         "Feedback",
@@ -401,7 +401,7 @@
         "pic": "PMAX",
         "start": "6/4",
         "end": "10/4",
-        "status": "upcoming"
+        "status": "inprog"
       },
       {
         "id": "18",
@@ -499,32 +499,32 @@
         "id": "28",
         "task": "Submit",
         "pic": "PMAX",
-        "start": "6/4",
-        "end": "7/4",
-        "status": "upcoming"
+        "start": "9/4",
+        "end": "13/4",
+        "status": "inprog"
       },
       {
         "id": "29",
         "task": "Feedback",
         "pic": "VAS",
-        "start": "7/4",
-        "end": "9/4",
+        "start": "13/4",
+        "end": "15/4",
         "status": "upcoming"
       },
       {
         "id": "30",
         "task": "Revise",
         "pic": "PMAX",
-        "start": "9/4",
-        "end": "10/4",
+        "start": "15/4",
+        "end": "16/4",
         "status": "upcoming"
       },
       {
         "id": "31",
         "task": "Final",
         "pic": "PMAX",
-        "start": "10/4",
-        "end": "11/4",
+        "start": "16/4",
+        "end": "17/4",
         "status": "upcoming"
       },
       {
@@ -663,7 +663,7 @@
         "pic": "VAS",
         "start": "6/4",
         "end": "",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "47",
@@ -671,7 +671,7 @@
         "pic": "VAS",
         "start": "9/4",
         "end": "",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "48",
@@ -679,7 +679,7 @@
         "pic": "VAS",
         "start": "12/4",
         "end": "",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "49",
@@ -687,7 +687,7 @@
         "pic": "VAS",
         "start": "15/4",
         "end": "",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "50",
@@ -812,23 +812,22 @@
     "ownerPmax": "Script, Background & Setup",
     "ownerVas": "Host & Content",
     "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
-    "currentProgress": "Các đồ cần mượn của trường:\n- (dựa theo kích thước kệ studio). Caption Facebook.",
-    "nextStep": "Feedback",
-    "nextStepPic": "VAS",
+    "currentProgress": "Caption Facebook. Production post Livestream => Chốt caption.",
+    "nextStep": "Final check and set up\n- Equipment \n- Background\n- Leadform\n- Caption\n- Seeding\n- Ads \n- Host",
+    "nextStepPic": "PMAX",
     "ganttStart": 0,
     "ganttEnd": 3,
     "weeklyFocus": {
       "cycleStage": "Script",
       "cycleIndex": 1,
       "focusPmax": [
-        "Các đồ cần mượn của trường:\n- (dựa theo kích thước kệ studio)",
         "Caption Facebook",
-        "Production"
+        "Production post Livestream => Chốt caption"
       ],
       "focusVas": [
-        "Feedback",
-        "Script dev detail R2",
-        "Feedback & final script"
+        "Final check and set up\n- Equipment \n- Background\n- Leadform\n- Caption\n- Seeding\n- Ads \n- Host",
+        "Airing",
+        "Propose Idea"
       ]
     },
     "phases": [
@@ -917,7 +916,7 @@
         "pic": "VAS",
         "start": "3/4",
         "end": "5/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "9",
@@ -925,7 +924,7 @@
         "pic": "PMAX",
         "start": "6/4",
         "end": "11/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "10",
@@ -933,7 +932,7 @@
         "pic": "Joint",
         "start": "11/4",
         "end": "13/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "D. Background livestream"
@@ -952,7 +951,7 @@
         "pic": "VAS",
         "start": "6/4",
         "end": "7/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "13",
@@ -960,7 +959,7 @@
         "pic": "Joint",
         "start": "10/4",
         "end": "13/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "E. Check background / studio"
@@ -990,7 +989,7 @@
         "pic": "Joint",
         "start": "8/4",
         "end": "12/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "g": "G. Caption livestream"
@@ -1042,7 +1041,7 @@
         "pic": "PMAX",
         "start": "6/4",
         "end": "8/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "22",
@@ -1050,7 +1049,7 @@
         "pic": "PMAX",
         "start": "9/4",
         "end": "9/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "2. During"
