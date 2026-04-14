@@ -1127,7 +1127,7 @@
       "focusPmax": [
         "Execution",
         "Airing",
-        "Airing"
+        "Revise"
       ],
       "focusVas": [
         "Confirm",
@@ -1802,7 +1802,7 @@
         "pic": "PMAX",
         "start": "6/4",
         "end": "7/4",
-        "status": "upcoming"
+        "status": "inprog"
       },
       {
         "id": "2.6",
@@ -1848,7 +1848,7 @@
         "pic": "PMAX",
         "start": "20/4",
         "end": "21/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "81",
@@ -1910,7 +1910,7 @@
         "pic": "PMAX",
         "start": "4/4",
         "end": "7/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "1.6",
@@ -1918,7 +1918,7 @@
         "pic": "VAS",
         "start": "8/4",
         "end": "8/4",
-        "status": "upcoming"
+        "status": "inprog"
       },
       {
         "id": "1.7",
