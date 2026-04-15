@@ -206,7 +206,7 @@
     "ownerPmax": "Script, Edit & Production",
     "ownerVas": "Footage, Feedback & Publishing",
     "desc": "12 video sale focus chia 2 pack: Pack Utilize (dùng footage KB có sẵn, 12 video) + Pack New (quay mới 6 video). Air plan cách 2 ngày/video từ 6/4 đến 27/5.",
-    "currentProgress": "Submit. Utilize KB 2 & 3.",
+    "currentProgress": "Submit. Submit.",
     "nextStep": "Feedback",
     "nextStepPic": "VAS",
     "ganttStart": 4,
@@ -216,8 +216,8 @@
       "cycleIndex": 1,
       "focusPmax": [
         "Submit",
-        "Utilize KB 2 & 3",
-        "Submit"
+        "Submit",
+        "Utilize KB 2 & 3"
       ],
       "focusVas": [
         "Feedback",
@@ -264,7 +264,7 @@
         "pic": "PMAX",
         "start": "23/3",
         "end": "25/3",
-        "status": "done"
+        "status": "inprog"
       },
       {
         "id": "2",
