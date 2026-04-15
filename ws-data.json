@@ -206,7 +206,7 @@
     "ownerPmax": "Script, Edit & Production",
     "ownerVas": "Footage, Feedback & Publishing",
     "desc": "12 video sale focus chia 2 pack: Pack Utilize (dùng footage KB có sẵn, 12 video) + Pack New (quay mới 6 video). Air plan cách 2 ngày/video từ 6/4 đến 27/5.",
-    "currentProgress": "Submit. Submit.",
+    "currentProgress": "Submit. Utilize KB 2 & 3.",
     "nextStep": "Feedback",
     "nextStepPic": "VAS",
     "ganttStart": 4,
@@ -216,8 +216,8 @@
       "cycleIndex": 1,
       "focusPmax": [
         "Submit",
-        "Submit",
-        "Utilize KB 2 & 3"
+        "Utilize KB 2 & 3",
+        "Submit"
       ],
       "focusVas": [
         "Feedback",
@@ -264,7 +264,7 @@
         "pic": "PMAX",
         "start": "23/3",
         "end": "25/3",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "2",
@@ -808,26 +808,23 @@
     "color": "#10b981",
     "name": "Livestream Production",
     "shortName": "Livestream",
-    "status": "on-track",
+    "status": "at-risk",
     "ownerPmax": "Script, Background & Setup",
     "ownerVas": "Host & Content",
     "desc": "Phien Livestream tuyen sinh VAS - Buoi 2: Kien tao moi truong hoc tap toan dien. LIVE 15/4/2026 (11h30-13h30). PMAX phu trach toan bo production; VAS confirm host va noi dung.",
-    "currentProgress": "Caption Facebook. Production post Livestream => Chốt caption.",
-    "nextStep": "Final check and set up\n- Equipment \n- Background\n- Leadform\n- Caption\n- Seeding\n- Ads \n- Host",
+    "currentProgress": "No tasks in progress.",
+    "nextStep": "Propose Idea",
     "nextStepPic": "PMAX",
     "ganttStart": 0,
     "ganttEnd": 3,
     "weeklyFocus": {
       "cycleStage": "Script",
       "cycleIndex": 1,
-      "focusPmax": [
-        "Caption Facebook",
-        "Production post Livestream => Chốt caption"
-      ],
+      "focusPmax": [],
       "focusVas": [
-        "Final check and set up\n- Equipment \n- Background\n- Leadform\n- Caption\n- Seeding\n- Ads \n- Host",
-        "Airing",
-        "Propose Idea"
+        "Propose Idea",
+        "Client Confirm",
+        "Production"
       ]
     },
     "phases": [
@@ -1000,7 +997,7 @@
         "pic": "Joint",
         "start": "8/4",
         "end": "14/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "g": "H. Livestream set up tại Studio"
@@ -1011,7 +1008,7 @@
         "pic": "PMAX",
         "start": "",
         "end": "",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "I. Creative Production support Livetsream"
@@ -1060,7 +1057,7 @@
         "pic": "PMAX",
         "start": "13/4",
         "end": "14/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "24",
@@ -1068,7 +1065,7 @@
         "pic": "PMAX",
         "start": "15/4",
         "end": "15/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "3. Amilify"
