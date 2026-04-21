@@ -1115,23 +1115,23 @@
     "ownerPmax": "Creative + Video",
     "ownerVas": "Admission Dept",
     "desc": "Series hero content nhin tu goc do phu huynh VASer: teasing video, main film, cutdown 30s va interview 'Ba me nghi gi'. Workstream trong tam cua campaign Admission T4-T5/2026.",
-    "currentProgress": "Execution. Airing.",
-    "nextStep": "Confirm",
-    "nextStepPic": "VAS",
+    "currentProgress": "Airing. Confirm.",
+    "nextStep": "Master release",
+    "nextStepPic": "PMAX",
     "ganttStart": 0,
     "ganttEnd": 8,
     "weeklyFocus": {
       "cycleStage": "Edit/Dung",
       "cycleIndex": 5,
       "focusPmax": [
-        "Execution",
         "Airing",
-        "Revise"
+        "Confirm",
+        "VAS Feedback"
       ],
       "focusVas": [
-        "Confirm",
-        "Airing on Parent's Group",
-        "Airing (Sau Tết 3 cái)"
+        "Master release",
+        "Adapt size",
+        "Airing"
       ]
     },
     "phases": [
@@ -1414,7 +1414,7 @@
         "pic": "PMAX",
         "start": "22/1",
         "end": "24/1",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "3.4",
@@ -1422,7 +1422,7 @@
         "pic": "VAS",
         "start": "24/1",
         "end": "25/1",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "3.5",
@@ -1430,7 +1430,7 @@
         "pic": "PMAX",
         "start": "26/1",
         "end": "25/9",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "II.. LAUNCHING"
@@ -1567,7 +1567,7 @@
         "pic": "PMAX",
         "start": "25/2",
         "end": "3/3",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "III.. AMPLIFING"
@@ -1801,7 +1801,7 @@
         "pic": "PMAX",
         "start": "6/4",
         "end": "7/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "2.6",
@@ -1809,7 +1809,7 @@
         "pic": "VAS",
         "start": "8/4",
         "end": "8/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "2.7",
@@ -1817,7 +1817,7 @@
         "pic": "PMAX",
         "start": "18/4",
         "end": "18/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "g": "II.. Launching"
@@ -1863,7 +1863,7 @@
         "pic": "VAS",
         "start": "20/4",
         "end": "20/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "g": "II.. AMPLIFING"
@@ -1917,7 +1917,7 @@
         "pic": "VAS",
         "start": "8/4",
         "end": "8/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "1.7",
@@ -1925,7 +1925,7 @@
         "pic": "PMAX",
         "start": "9/4",
         "end": "11/4",
-        "status": "upcoming"
+        "status": "done"
       },
       {
         "id": "1.8",
@@ -1933,7 +1933,7 @@
         "pic": "VAS",
         "start": "12/4",
         "end": "12/4",
-        "status": "upcoming"
+        "status": "inprog"
       },
       {
         "id": "1.9",
@@ -2000,118 +2000,118 @@
         "pic": "PMAX",
         "start": "6/4",
         "end": "9/4",
-        "status": "inprog"
+        "status": "done"
       },
       {
         "id": "2.6",
         "task": "VAS Feedback",
         "pic": "VAS",
-        "start": "10/4",
-        "end": "14/4",
-        "status": "upcoming"
+        "start": "20/4",
+        "end": "24/4",
+        "status": "inprog"
       },
       {
         "id": "2.7",
         "task": "Revise",
         "pic": "PMAX",
-        "start": "15/4",
-        "end": "17/4",
+        "start": "25/4",
+        "end": "27/4",
         "status": "upcoming"
       },
       {
         "id": "2.8",
         "task": "VAS Confirm",
         "pic": "VAS",
-        "start": "20/4",
-        "end": "20/4",
+        "start": "30/4",
+        "end": "30/4",
         "status": "upcoming"
       },
       {
         "id": "2.9",
         "task": "VAS check lịch 2 gia đình anh Duy Nhất và anh Hoà",
         "pic": "VAS",
-        "start": "21/4",
-        "end": "21/4",
+        "start": "1/5",
+        "end": "1/5",
         "status": "upcoming"
       },
       {
         "id": "2.10",
         "task": "Production - Preshooting (Chốt lịch quay gia đình và Production House)",
         "pic": "PMAX",
-        "start": "22/4",
-        "end": "22/4",
+        "start": "2/5",
+        "end": "2/5",
         "status": "upcoming"
       },
       {
         "id": "2.11",
         "task": "Shooting - est",
         "pic": "PMAX",
-        "start": "22/4",
-        "end": "23/4",
+        "start": "2/5",
+        "end": "3/5",
         "status": "upcoming"
       },
       {
         "id": "2.12",
         "task": "Offline",
         "pic": "PMAX",
-        "start": "26/4",
-        "end": "28/4",
+        "start": "6/5",
+        "end": "8/5",
         "status": "upcoming"
       },
       {
         "id": "2.13",
         "task": "VAS Feedback",
         "pic": "VAS",
-        "start": "29/4",
-        "end": "29/4",
+        "start": "9/5",
+        "end": "9/5",
         "status": "upcoming"
       },
       {
         "id": "2.14",
         "task": "Revise",
         "pic": "PMAX",
-        "start": "2/5",
-        "end": "3/5",
+        "start": "12/5",
+        "end": "13/5",
         "status": "upcoming"
       },
       {
         "id": "2.15",
         "task": "Online",
         "pic": "PMAX",
-        "start": "4/5",
-        "end": "6/5",
+        "start": "14/5",
+        "end": "16/5",
         "status": "upcoming"
       },
       {
         "id": "2.16",
         "task": "VAS Feedback",
         "pic": "VAS",
-        "start": "10/5",
-        "end": "10/5",
+        "start": "20/5",
+        "end": "20/5",
         "status": "upcoming"
       },
       {
         "id": "2.17",
         "task": "Revise",
         "pic": "PMAX",
-        "start": "11/5",
-        "end": "11/5",
+        "start": "21/5",
+        "end": "21/5",
         "status": "upcoming"
       },
       {
         "id": "2.18",
         "task": "Confirm - Master release",
         "pic": "VAS",
-        "start": "11/5",
-        "end": "11/5",
+        "start": "21/5",
+        "end": "21/5",
         "status": "upcoming"
       },
       {
         "id": "2.19",
         "task": "Airing",
         "pic": "PMAX",
-        "start": "11/5",
-        "end": "11/5",
+        "start": "21/5",
+        "end": "21/5",
         "status": "upcoming"
       }
     ]
